@@ -33,21 +33,55 @@
 - {: id="20210127114348-gzgtorg"}存储结构定义
   ```cpp
   #define MAXSIZE 100 //顺序栈存储空间的初始分配量
-  typedef struct 
+  typedef struct
   {
-      SElemType *base;//栈底指针
-      SElemType *top;//栈顶指针
-      int Stacksize;//栈可用的最大容量
-  }SqStack;
+      SElemType *base; //栈底指针
+      SElemType *top;  //栈顶指针
+      int stacksize;   //栈可用的最大容量
+  } SqStack;
   ```
   {: id="20210127114834-76wkphg"}
 - {: id="20210127114828-701wc12"}操作
   - {: id="20210127114840-kpu2o7k"}初始化
+    ```cpp
+    Status InitStack(SqStack &S)
+    {                                    //构造一个空栈S
+        S.base = new SElemType[MAXSIZE]; //为顺序栈分配一个最大容量为MAXSIZE的数组空间
+        if (!S.base)
+            exit(OVERFLOW);    //存储分配失败
+        S.top = S.base;        //top初始为base，空栈
+        S.stacksize = MAXSIZE; //stacksize置为栈的最大容量MAXSIZE
+        return OK;
+    }
+    ```
+    {: id="20210127115537-2wiapzk"}
   - {: id="20210127114843-m0ap5cu"}入栈
+    ```cpp
+    Status Push(SqStack &S, SElemType e)
+    { //插入元素e为新的栈顶元素
+        if (S.top - S.base == S.stacksize)
+            return ERROR; //栈满
+        *S.top++ = e;     //元素e压入栈顶，栈顶指针加1
+        return OK;
+    }
+    ```
+    {: id="20210127115809-8j2rdwl"}
   - {: id="20210127114847-23rlxb4"}出栈
+    ```cpp
+    Status Pop(SqStack &S, SElemType e)
+    { //删除S的栈顶元素，用e返回其值
+        if (S.top == S.base)
+            return ERROR; //栈空
+        e = *--S.top;     //栈顶指针减1，将栈顶元素赋给e
+        return OK;
+    }
+    ```
+    {: id="20210127120059-v1khzzu"}
   - {: id="20210127114852-lnvx53q"}取栈顶元素
   {: id="20210127114840-ktcetq0"}
 {: id="20210127114239-96ucmwy"}
+
+{: id="20210127120108-dmpwda1"}
 
 
 {: id="20210127105540-h96qlt2" type="doc"}
