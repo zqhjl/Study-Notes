@@ -1,0 +1,41 @@
+{
+  "name": "",
+  "path": "/",
+  "isDir": true,
+  "children": [
+    {
+      "name": "数据结构",
+      "path": "/数据结构/",
+      "isDir": true,
+      "children": [
+        {
+          "name": "0 绪论.md",
+          "path": "/数据结构/0 绪论.md"
+        },
+        {
+          "name": "1 线性表.md",
+          "path": "/数据结构/1 线性表.md"
+        },
+        {
+          "name": "2 栈和队列.md",
+          "path": "/数据结构/2 栈和队列.md"
+        }
+      ]
+    },
+    {
+      "name": "离散数学",
+      "path": "/离散数学/",
+      "isDir": true,
+      "children": [
+        {
+          "name": "0 数学语言与证明方法.md",
+          "path": "/离散数学/0 数学语言与证明方法.md"
+        },
+        {
+          "name": "1 命题逻辑.md",
+          "path": "/离散数学/1 命题逻辑.md"
+        }
+      ]
+    }
+  ]
+}
