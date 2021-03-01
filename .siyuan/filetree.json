@@ -36,6 +36,11 @@
           "path": "/离散数学/1 命题逻辑.md"
         }
       ]
+    },
+    {
+      "name": "Java",
+      "path": "/Java/",
+      "isDir": true
     }
   ]
 }
