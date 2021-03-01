@@ -49,6 +49,10 @@
         {
           "name": "Java基础知识.md",
           "path": "/Java/Java基础知识.md"
+        },
+        {
+          "name": "test.md",
+          "path": "/Java/test.md"
         }
       ]
     }
