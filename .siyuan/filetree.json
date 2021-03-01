@@ -40,7 +40,13 @@
     {
       "name": "Java",
       "path": "/Java/",
-      "isDir": true
+      "isDir": true,
+      "children": [
+        {
+          "name": "Java基础知识.md",
+          "path": "/Java/Java基础知识.md"
+        }
+      ]
     }
   ]
 }
