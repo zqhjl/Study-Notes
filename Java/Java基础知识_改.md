@@ -46,7 +46,6 @@
   - {: id="20210302194722-tj8r8c3"}##### JVM
     {: id="20210302194722-wzepadp" updated="20210302195117"}
 
-
     - {: id="20210302001112-6pfdzik" updated="20210302184717"}定义
       {: id="20210302184730-d5lopw1" updated="20210302184739"}
 
@@ -226,8 +225,8 @@
         {: id="20210302194906-td8yz2g"}
       {: id="20210302195226-gz4zpat"}
     {: id="20210302194907-2yjl20f"}
-  - {: id="20210302194904-i48ne1j"}JDK 和 JRE
-    {: id="20210302194904-kcacdul" updated="20210302194904"}
+  - {: id="20210302194904-i48ne1j"}##### JDK 和 JRE
+    {: id="20210302194904-kcacdul" updated="20210302224713"}
 
     - {: id="20210302195245-jbqu5im"}JDK（Java Development Kit）
       {: id="20210302195245-lap75jm" updated="20210302195401"}
@@ -283,34 +282,87 @@
           {: id="20210302195709-oulhxti" updated="20210302223428"}
         {: id="20210302223432-mt52l5v"}
       {: id="20210302223433-17dp8vz"}
-    - {: id="20210302223429-7p0w3dm"}注
-      {: id="20210302223429-imri7vz" updated="20210302223441"}
+    - {: id="20210302223429-7p0w3dm"}使用 JSP 部署 Web 应用程序，在应用程序服务器中运行 Java 程序，应用程序服务器会将 JSP 转换为 Java servlet，需要使用 JDK 来编译 servlet。
+      {: id="20210302223429-imri7vz" updated="20210302224811"}
+    {: id="20210302224814-e59dft6"}
+  {: id="20210302224815-6uiovo3"}
+- {: id="20210302224813-1m4tqxm"}#### Oracle JDK 和 OpenJDK 的对比
+  {: id="20210302224813-uzgxf44" updated="20210302224828"}
 
-      - {: id="20210302223442-ydk9dxx"}使用 JSP 部署 Web 应用程序，在应用程序服务器中运行 Java 程序，应用程序服务器会将 JSP 转换为 Java servlet，并且需要使用 JDK 来编译 servlet。
-        {: id="20210302223442-qll2wgr" updated="20210302223442"}
-      {: id="20210302223442-29zckjo"}
-    {: id="20210302195246-mm47y44"}
-  {: id="20210302194722-18llue5"}
-{: id="20210301220753-apem785" updated="20210302195832"}
+  - {: id="20210302224832-mx3azmc"}Java 7
+    {: id="20210302224832-667ho0b"}
 
-#### Oracle JDK 和 OpenJDK 的对比
-{: id="20210301203429-9p67xjm" updated="20210302223507"}
+    - {: id="20210302224851-jbv32o1"}OpenJDK 项目主要基于 Sun 捐赠的 HotSpot 源代码
+      {: id="20210302224851-5rhunv9"}
+    - {: id="20210302224906-rgdbnob"}OpenJDK 被选为 Java 7的参考实现，由 Oracle 工程师维护
+      {: id="20210302224906-6skunj3" updated="20210302224916"}
 
-对于 Java 7，没什么关键的地方。OpenJDK 项目主要基于 Sun 捐赠的 HotSpot 源代码。此外，OpenJDK 被选为 Java 7的参考实现，由 Oracle 工程师维护。关于 JVM，JDK，JRE 和 OpenJDK 之间的区别，Oracle 博客帖子在 2012年有一个更详细的答案：
-{: id="20210301203429-vlsxesg"}
+      - {: id="20210302225206-cvzey9w"}Oracle JDK 版本构建过程基于 OpenJDK 7构建
+        {: id="20210302224936-oekvmlr" updated="20210302225206"}
 
-> 问：OpenJDK 存储库中的源代码与用于构建 Oracle JDK 的代码之间有什么区别？
-> {: id="20210301203429-7mwvwub"}
->
-> 答：非常接近 - 我们的 Oracle JDK 版本构建过程基于 OpenJDK 7构建，只添加了几个部分，例如部署代码，其中包括 Oracle 的 Java 插件和 Java WebStart 的实现，以及一些封闭的源代码派对组件，如图形光栅化器，一些开源的第三方组件，如 Rhino，以及一些零碎的东西，如附加文档或第三方字体。展望未来，我们的目的是开源 Oracle JDK 的所有部分，除了我们考虑商业功能的部分。
-> {: id="20210301203429-tuxy2y4"}
-{: id="20210301203429-korjz97"}
+        - {: id="20210302224936-h6qi0wk"}添加部分
+          {: id="20210302225206-rm62z8c" updated="20210302225235"}
+
+          - {: id="20210302225001-89ylwa4"}Oracle 的 Java 插件
+            {: id="20210302225001-eytjrog"}
+          - {: id="20210302225013-fnxk55d"}Java WebStart 的实现
+            {: id="20210302225013-sm9xgwq"}
+          - {: id="20210302225013-q4wp8s2"}封闭的源代码派对组件
+            {: id="20210302225014-4lox5lp"}
+
+            - {: id="20210302225022-jwbq79v"}图形光栅化器
+              {: id="20210302225022-nu91qm1"}
+            {: id="20210302225039-ikj1g4z"}
+          - {: id="20210302225038-mai3k41"}一些开源的第三方组件
+            {: id="20210302225038-zt6ogwd"}
+
+            - {: id="20210302225041-e9ubqf9"}Rhino
+              {: id="20210302225041-wor2l3b"}
+            {: id="20210302225055-zszrko3"}
+          - {: id="20210302225054-upferfl"}其他
+            {: id="20210302225054-s94dtmz" updated="20210302225057"}
+
+            - {: id="20210302225057-1ptkf6c"}附加文档
+              {: id="20210302225057-qvv0ag3"}
+            - {: id="20210302225117-46zrzkb"}第三方字体
+              {: id="20210302225117-rb5ylqv"}
+            {: id="20210302225241-ggxic38"}
+          {: id="20210302225241-d1odbig"}
+        - {: id="20210302225240-4s4unf9"}未来目的
+          {: id="20210302225240-a7k6vb1" updated="20210302225321"}
+
+          - {: id="20210302225323-xkksfzk"}开源 Oracle JDK 的所有部分
+            {: id="20210302225323-oyb4bcm"}
+
+            - {: id="20210302225344-ohzhkji"}除了我们考虑商业功能的部分
+              {: id="20210302225344-i05xvsa" updated="20210302225413"}
+            {: id="20210302225436-4qvkmvk"}
+          {: id="20210302225436-efvr019"}
+        {: id="20210302225437-54dhywp"}
+      {: id="20210302225437-y39k1hy"}
+    {: id="20210302225437-lzbygdp"}
+  - {: id="20210302225435-zmlcbqp"}总体对比
+    {: id="20210302225435-t7isq9m" updated="20210302225442"}
+
+    - {: id="20210302225443-sp1s2fw"}版本更新
+      {: id="20210302225506-zzm7uu7" updated="20210302225513"}
+
+      - {: id="20210302225506-kx44i0n"}Oracle JDK 大概每6个月发一次主要版本
+        {: id="20210302225506-z078031" updated="20210302225506"}
+      - {: id="20210302225513-qd67kfj"}OpenJDK 版本大概每三个月发布一次
+        {: id="20210302225515-58m1s67"}
+      - {: id="20210302225527-etdgrqw"}
+        {: id="20210302225527-laujlk4"}
+      {: id="20210302225515-06l5u2l"}
+    {: id="20210302225444-6x6qgn8"}
+  {: id="20210302224836-3qxkeuk"}
+{: id="20210301220753-apem785" updated="20210302225526"}
 
 **总结：**
 {: id="20210301203429-h7kolhe"}
 
-1. {: id="20210301203429-950rjm6"}Oracle JDK 大概每6个月发一次主要版本r'n，而 OpenJDK 版本大概每三个月发布一次。但这不是固定的，我觉得了解这个没啥用处。详情参见：[https://blogs.oracle.com/java-platform-group/update-and-faq-on-the-java-se-release-cadence](https://blogs.oracle.com/java-platform-group/update-and-faq-on-the-java-se-release-cadence) 。
-   {: id="20210301203429-e5l9c83" updated="20210302223848"}
+1. {: id="20210301203429-950rjm6"}r'n，而 OpenJDK 版本大概每三个月发布一次。但这不是固定的，我觉得了解这个没啥用处。详情参见：[https://blogs.oracle.com/java-platform-group/update-and-faq-on-the-java-se-release-cadence](https://blogs.oracle.com/java-platform-group/update-and-faq-on-the-java-se-release-cadence) 。
+   {: id="20210301203429-e5l9c83" updated="20210302225451"}
 2. {: id="20210301203429-mb0h6w0"}OpenJDK 是一个参考模型并且是完全开源的，而 Oracle JDK 是 OpenJDK 的一个实现，并不是完全开源的；
    {: id="20210301203429-o1620d7"}
 3. {: id="20210301203429-5m8tu3w"}Oracle JDK 比 OpenJDK 更稳定。OpenJDK 和 Oracle JDK 的代码几乎相同，但 Oracle JDK 有更多的类和一些错误修复。因此，如果您想开发企业/商业软件，我建议您选择 Oracle JDK，因为它经过了彻底的测试和稳定。某些情况下，有些人提到在使用 OpenJDK 可能会遇到了许多应用程序崩溃的问题，但是，只需切换到 Oracle JDK 就可以解决问题；
