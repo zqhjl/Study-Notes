@@ -17,17 +17,13 @@
    {: id="20210301221807-fahol4s"}
 5. {: id="20210301221806-a5ilkgr"}安全性；
    {: id="20210301221807-nrqsvsv"}
-6. {: id="20210301221806-kkwp0jl"}支持多线程（ C++ 语言没有内置的多线程机制，因此必须调用操作系统的多线程功能来进行多线程程序设计，而 Java 语言却提供了多线程支持）；
-   {: id="20210301221807-s77mblv"}
+6. {: id="20210301221806-kkwp0jl"}支持多线程
+   {: id="20210301221807-s77mblv" updated="20210302175044"}
 7. {: id="20210301221806-j7zfoxv"}支持网络编程并且很方便（ Java 语言诞生本身就是为简化网络编程设计的，因此 Java 语言不仅支持网络编程而且很方便）；
    {: id="20210301221807-0i174lt"}
 8. {: id="20210301221806-iu923rk"}编译与解释并存；
-   {: id="20210301221807-vpm11v4"}
+   {: id="20210301221807-vpm11v4" updated="20210302175051"}
 {: id="20210301221807-rvqdpl8"}
-
-> 修正（参见： [issue#544](https://github.com/Snailclimb/JavaGuide/issues/544)）：C++11 开始（2011 年的时候）,C++就引入了多线程库，在 windows、linux、macos 都可以使用`std::thread`和`std::async`来创建线程。参考链接：http://www.cplusplus.com/reference/thread/thread/?kw=thread
-> {: id="20210301221807-4sj6akf"}
-{: id="20210301221807-ajvqcf5"}
 
 #### 1.1.2. 关于 JVM JDK 和 JRE 最详细通俗的解答
 {: id="20210301221807-fll8yyz"}
@@ -227,7 +223,7 @@ Java 中的注释有三种：
 {: id="20210301221807-tlvz7t8"}
 
 | 访问控制             | private  | protected  | public   |              |            |           |        |
-| -------------------- | -------- | ---------- | -------- | ------------ | ---------- | --------- | ------ |
+| ---------------------- | ---------- | ------------ | ---------- | -------------- | ------------ | ----------- | -------- |
 | 类，方法和变量修饰符 | abstract | class      | extends  | final        | implements | interface | native |
 |                      | new      | static     | strictfp | synchronized | transient  | volatile  |        |
 | 程序控制             | break    | continue   | return   | do           | while      | if        | else   |
@@ -572,7 +568,7 @@ Java**中**有 8 种基本数据类型，分别为：
 {: id="20210301221807-wlte6ae"}
 
 | 基本类型 | 位数 | 字节 | 默认值  |
-| :------- | :--- | :--- | ------- |
+| :--------- | :----- | :----- | --------- |
 | int      | 32   | 4    | 0       |
 | short    | 16   | 2    | 0       |
 | long     | 64   | 8    | 0L      |
@@ -960,7 +956,7 @@ Java 程序设计语言对对象采用的不是引用调用，实际上，对象
 {: id="20210301221807-9hd0ld4"}
 
 | 区别点     | 重载方法 | 重写方法                                                         |
-| :--------- | :------- | :--------------------------------------------------------------- |
+| :----------- | :--------- | :----------------------------------------------------------------- |
 | 发生范围   | 同一个类 | 子类                                                             |
 | 参数列表   | 必须修改 | 一定不能修改                                                     |
 | 返回类型   | 可修改   | 子类方法返回值类型应比父类方法返回值类型更小或相等               |
@@ -1544,10 +1540,14 @@ JAVA 反射机制是在运行状态中，对于任意一个类，都能够知道
 
 <p style="font-size:13px;text-align:right">图片来自：https://simplesnippets.tech/exception-handling-in-java-part-1/</p>
 
+{: id="20210302175031-wbfdns9"}
+
 ![](https://guide-blog-images.oss-cn-shenzhen.aliyuncs.com/2020-12/Java%E5%BC%82%E5%B8%B8%E7%B1%BB%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84%E5%9B%BE2.png)
 {: id="20210301221807-00cs3eb"}
 
 <p style="font-size:13px;text-align:right">图片来自：https://chercher.tech/java-programming/exceptions-java</p>
+
+{: id="20210302175031-8c15b98"}
 
 在 Java 中，所有的异常都有一个共同的祖先 `java.lang` 包中的 `Throwable` 类。`Throwable` 类有两个重要的子类 `Exception`（异常）和 `Error`（错误）。`Exception` 能被程序本身处理(`try-catch`)， `Error` 是无法处理的(只能尽量避免)。
 {: id="20210301221807-oufp9y5"}
