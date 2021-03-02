@@ -351,27 +351,47 @@
         {: id="20210302225506-z078031" updated="20210302225506"}
       - {: id="20210302225513-qd67kfj"}OpenJDK 版本大概每三个月发布一次
         {: id="20210302225515-58m1s67"}
-      - {: id="20210302225527-etdgrqw"}
-        {: id="20210302225527-laujlk4"}
-      {: id="20210302225515-06l5u2l"}
+      - {: id="20210302225527-etdgrqw"}详情参见
+        {: id="20210302225527-laujlk4" updated="20210302225554"}
+
+        - {: id="20210302225555-z9ldf59"}[https://blogs.oracle.com/java-platform-group/update-and-faq-on-the-java-se-release-cadence](https://blogs.oracle.com/java-platform-group/update-and-faq-on-the-java-se-release-cadence)
+          {: id="20210302225555-6fx69jw" updated="20210302225555"}
+        {: id="20210302225601-65no6mn"}
+      {: id="20210302225601-vegwih6"}
+    - {: id="20210302225600-xbxmyin"}开源与否
+      {: id="20210302225600-8vfgyvm" updated="20210302225616"}
+
+      - {: id="20210302225617-s2ghbix"}OpenJDK 是一个参考模型并且是完全开源的
+        {: id="20210302225617-i9r8ol5"}
+      - {: id="20210302225625-bdcqq09"}Oracle JDK 是 OpenJDK 的一个实现，并不是完全开源的
+        {: id="20210302225625-bjrtzo0" updated="20210302225647"}
+      {: id="20210302225655-9hixlmm"}
+    - {: id="20210302225654-42buv1n"}稳定性
+      {: id="20210302225654-rb3zexn" updated="20210302225658"}
+
+      - {: id="20210302225659-m6h1xgo"}Oracle JDK 比 OpenJDK 更稳定
+        {: id="20210302225659-a8hqbks"}
+      - {: id="20210302225707-ddgtsra"}Oracle JDK 有更多的类和一些错误修复
+        {: id="20210302225707-ny4eypd" updated="20210302225725"}
+      {: id="20210302225730-cyj2239"}
+    - {: id="20210302225728-ff174wb"}响应性和
+      {: id="20210302225728-k2pzwcy" updated="20210302225809"}
     {: id="20210302225444-6x6qgn8"}
   {: id="20210302224836-3qxkeuk"}
-{: id="20210301220753-apem785" updated="20210302225526"}
+{: id="20210301220753-apem785" updated="20210302225714"}
 
 **总结：**
-{: id="20210301203429-h7kolhe"}
+{: id="20210301203429-h7kolhe" updated="20210302225606"}
 
-1. {: id="20210301203429-950rjm6"}r'n，而 OpenJDK 版本大概每三个月发布一次。但这不是固定的，我觉得了解这个没啥用处。详情参见：[https://blogs.oracle.com/java-platform-group/update-and-faq-on-the-java-se-release-cadence](https://blogs.oracle.com/java-platform-group/update-and-faq-on-the-java-se-release-cadence) 。
-   {: id="20210301203429-e5l9c83" updated="20210302225451"}
-2. {: id="20210301203429-mb0h6w0"}OpenJDK 是一个参考模型并且是完全开源的，而 Oracle JDK 是 OpenJDK 的一个实现，并不是完全开源的；
-   {: id="20210301203429-o1620d7"}
-3. {: id="20210301203429-5m8tu3w"}Oracle JDK 比 OpenJDK 更稳定。OpenJDK 和 Oracle JDK 的代码几乎相同，但 Oracle JDK 有更多的类和一些错误修复。因此，如果您想开发企业/商业软件，我建议您选择 Oracle JDK，因为它经过了彻底的测试和稳定。某些情况下，有些人提到在使用 OpenJDK 可能会遇到了许多应用程序崩溃的问题，但是，只需切换到 Oracle JDK 就可以解决问题；
-   {: id="20210301203429-btnno4q"}
-4. {: id="20210301203429-641t1qg"}在响应性和 JVM 性能方面，Oracle JDK 与 OpenJDK 相比提供了更好的性能；
+{: id="20210301203429-o1620d7" updated="20210302225650"}
+
+1. {: id="20210301203429-5m8tu3w"}。OpenJDK 和 Oracle JDK 的代码几乎相同，但 。因此，如果您想开发企业/商业软件，我建议您选择 Oracle JDK，因为它经过了彻底的测试和稳定。某些情况下，有些人提到在使用 OpenJDK 可能会遇到了许多应用程序崩溃的问题，但是，只需切换到 Oracle JDK 就可以解决问题；
+   {: id="20210301203429-btnno4q" updated="20210302225712"}
+2. {: id="20210301203429-641t1qg"}在响应性和 JVM 性能方面，Oracle JDK 与 OpenJDK 相比提供了更好的性能；
    {: id="20210301203429-pcjql5h"}
-5. {: id="20210301203429-85o7ty9"}Oracle JDK 不会为即将发布的版本提供长期支持，用户每次都必须通过更新到最新版本获得支持来获取最新版本；
+3. {: id="20210301203429-85o7ty9"}Oracle JDK 不会为即将发布的版本提供长期支持，用户每次都必须通过更新到最新版本获得支持来获取最新版本；
    {: id="20210301203429-okhyr1e"}
-6. {: id="20210301203429-nepdiin"}Oracle JDK 根据二进制代码许可协议获得许可，而 OpenJDK 根据 GPL v2许可获得许可。
+4. {: id="20210301203429-nepdiin"}Oracle JDK 根据二进制代码许可协议获得许可，而 OpenJDK 根据 GPL v2许可获得许可。
    {: id="20210301203429-qr2n6t7"}
 {: id="20210301203429-kh8tv10"}
 
