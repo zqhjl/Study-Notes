@@ -7,8 +7,8 @@
 #### Java 语言有哪些特点?
 {: id="20210301221807-5ucrcsq"}
 
-1. {: id="20210301221806-ggn4czl"}简单易学；
-   {: id="20210301221807-pppumhd"}
+1. {: id="20210301221806-ggn4czl"}简单易学；“”“”“
+   {: id="20210301221807-pppumhd" updated="20210305215738"}
 2. {: id="20210301221806-wjj2811"}面向对象（封装，继承，多态）；
    {: id="20210301221807-u5kf0lm"}
 3. {: id="20210301221806-lv3nyoa"}平台无关性（ Java 虚拟机实现平台无关性）；
@@ -91,7 +91,7 @@ JRE 是 Java 运行时环境。它是运行已编译 Java 程序所需的所有�
 **总结：**
 {: id="20210301221807-nz8kc3y"}
 
-1. {: id="20210301221806-oserib5"}Oracle JDK 大概每 6个月发一次主要版本，而 OpenJDK 版本大概每三个月发布一次。但这不是固定的，我觉得了解这个没啥用处。[详情参见](https://blogs.oracle.com/java-platform-group/update-and-faq-on-the-java-se-release-cadence) 
+1. {: id="20210301221806-oserib5"}Oracle JDK 大概每 6个月发一次主要版本，而 OpenJDK 版本大概每三个月发布一次。但这不是固定的，我觉得了解这个没啥用处。[详情参见](https://blogs.oracle.com/java-platform-group/update-and-faq-on-the-java-se-release-cadence)
    {: id="20210301221807-syzzue9" updated="20210305144040"}
 2. {: id="20210301221806-q4qf0ji"}OpenJDK 是一个参考模型并且是完全开源的，而 Oracle JDK 是 OpenJDK 的一个实现，并不是完全开源的；
    {: id="20210301221807-9uc7kzu"}
