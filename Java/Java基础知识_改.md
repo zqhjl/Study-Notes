@@ -483,8 +483,9 @@
 ### Java 语法
 {: id="20210301203429-6eemplz" updated="20210305134418"}
 
-- {: id="20210305164606-rbscu1c"}#### 字符型常量和字符串常量的区别
+- {: id="20210305164606-rbscu1c" fold="1"}#### 字符型常量和字符串常量的区别
   {: id="20210305164606-zzgnx7n" updated="20210305164618"}
+
 
   - {: id="20210305164609-g63exox"}形式上
     {: id="20210305164609-08233xj" updated="20210305215424"}
@@ -521,8 +522,9 @@
     >
     {: id="20210301203429-a985j61"}
   {: id="20210305164838-0y0cfnl"}
-- {: id="20210305164718-2xm3lmz"}#### 关于注释
+- {: id="20210305164718-2xm3lmz" fold="1"}#### 关于注释
   {: id="20210305164831-5qf93zw" updated="20210305165947"}
+
 
   * {: id="20210305133201-3y93j2o"}Java 中的注释有三种
     {: id="20210301203429-wqhl5zj" updated="20210305165937"}
@@ -532,227 +534,331 @@
     * {: id="20210301203429-kfdx4jc"}多行注释
       {: id="20210301203429-kltdx7g"}
     * {: id="20210301203429-x0s622t"}文档注释
-      {: id="20210301203429-4wotj3n" updated="20210305165940"}
-    {: id="20210301203429-025snxn"}
+      {: id="20210301203429-4wotj3n" updated="20210305232856"}
+    {: id="20210305232900-8objhaz"}
+  * {: id="20210305232859-lvo3c8d"}注释并不会执行
+    {: id="20210305232859-bfabx3i" updated="20210305232904"}
+
+    * {: id="20210305232904-2fqro33"}编译器在编译代码之前会把代码中的所有注释抹掉,字节码中不保留注释
+      {: id="20210305232904-1rauhq0" updated="20210305232913"}
+    * {: id="20210305232913-8my3458"}能够帮助看代码的人快速地理清代码之间的逻辑关系
+      {: id="20210305232913-kr6qvz4" updated="20210305233143"}
+    {: id="20210305233145-vcsdd0m"}
+  * {: id="20210305233144-5l31fgy"}《Clean Code》这本书明确指出：
+    {: id="20210305233144-7y2rlmx" updated="20210305233144"}
+
+    > **代码的注释不是越详细越好。实际上好的代码本身就是注释，我们要尽量规范和美化自己的代码来减少不必要的注释。**
+    > {: id="20210301203429-6wf255j"}
+    >
+    > **若编程语言足够有表达力，就不需要注释，尽量通过代码来阐述。**
+    > {: id="20210301203429-elm1gij"}
+    >
+    > 举个例子：
+    > {: id="20210301203429-fsu67jq"}
+    >
+    > 去掉下面复杂的注释，只需要创建一个与注释所言同一事物的函数即可
+    > {: id="20210301203429-wsrlonm"}
+    >
+    > ```java
+    > // check to see if the employee is eligible for full benefits
+    > if ((employee.flags & HOURLY_FLAG) && (employee.age > 65))
+    > ```
+    > {: id="20210301203429-eml7cci"}
+    >
+    > 应替换为
+    > {: id="20210301203429-yvxf6pa"}
+    >
+    > ```java
+    > if (employee.isEligibleForFullBenefits())
+    > ```
+    > {: id="20210301203429-9vuukiq"}
+    >
+    {: id="20210301203429-oke81ft"}
   {: id="20210303193009-5monbrd" updated="20210305164606"}
-{: id="20210305164816-r44ipy8"}
+- {: id="20210305233903-lz8exzn" fold="1"}#### 标识符和关键字的区别
+  {: id="20210305233903-18kdpvh" updated="20210305234331"}
 
-在我们编写代码的时候，如果代码量比较少，我们自己或者团队其他成员还可以很轻易地看懂代码，但是当项目结构一旦复杂起来，我们就需要用到注释了。注释并不会执行(编译器在编译代码之前会把代码中的所有注释抹掉,字节码中不保留注释)，是我们程序员写给自己看的，注释是你的代码说明书，能够帮助看代码的人快速地理清代码之间的逻辑关系。因此，在写程序的时候随手加上注释是一个非常好的习惯。
-{: id="20210301203429-ryluzn0"}
 
-《Clean Code》这本书明确指出：
-{: id="20210301203429-a83d32f"}
+  - {: id="20210305234000-ab6kcnu"}标识符
+    {: id="20210305233939-baj7tth" updated="20210305233948"}
 
-> **代码的注释不是越详细越好。实际上好的代码本身就是注释，我们要尽量规范和美化自己的代码来减少不必要的注释。**
-> {: id="20210301203429-6wf255j"}
->
-> **若编程语言足够有表达力，就不需要注释，尽量通过代码来阐述。**
-> {: id="20210301203429-elm1gij"}
->
-> 举个例子：
-> {: id="20210301203429-fsu67jq"}
->
-> 去掉下面复杂的注释，只需要创建一个与注释所言同一事物的函数即可
-> {: id="20210301203429-wsrlonm"}
->
-> ```java
-> // check to see if the employee is eligible for full benefits
-> if ((employee.flags & HOURLY_FLAG) && (employee.age > 65))
-> ```
-> {: id="20210301203429-eml7cci"}
->
-> 应替换为
-> {: id="20210301203429-yvxf6pa"}
->
-> ```java
-> if (employee.isEligibleForFullBenefits())
-> ```
-> {: id="20210301203429-9vuukiq"}
-{: id="20210301203429-oke81ft"}
+    - {: id="20210305233939-rknp1mj"}定义
+      {: id="20210305234000-2fzmssf" updated="20210305234007"}
 
-#### 标识符和关键字的区别是什么？
-{: id="20210301203429-uye9rvu"}
+      - {: id="20210305233949-9vxad8t"}我们为程序、类、变量、方法等取的名字
+        {: id="20210305233949-pwrvv1l" updated="20210305233958"}
+      {: id="20210305234022-eav4ove"}
+    {: id="20210305234104-l6w0062"}
+  - {: id="20210305234030-uuk5tbl"}关键字
+    {: id="20210305234021-nz8g9eh" updated="20210305234026"}
 
-在我们编写程序的时候，需要大量地为程序、类、变量、方法等取名字，于是就有了标识符，简单来说，标识符就是一个名字。但是有一些标识符，Java 语言已经赋予了其特殊的含义，只能用于特定的地方，这种特殊的标识符就是关键字。因此，关键字是被赋予特殊含义的标识符。比如，在我们的日常生活中 ，“警察局”这个名字已经被赋予了特殊的含义，所以如果你开一家店，店的名字不能叫“警察局”，“警察局”就是我们日常生活中的关键字。
-{: id="20210301203429-guaaq9w"}
+    - {: id="20210305234021-12g6pg5"}定义
+      {: id="20210305234030-xt1u3cu" updated="20210305234036"}
 
-#### Java 中有哪些常见的关键字？
-{: id="20210301203429-9fqsp5r"}
+      - {: id="20210305234026-lcpkyn5"}被赋予Java特殊含义的((20210305234000-ab6kcnu "标识符"))
+        {: id="20210305234026-cc0o4hr" updated="20210305234138"}
+      {: id="20210305234139-6mmh5m1"}
+    - {: id="20210305234139-6jps359"}常见的关键字
+      {: id="20210305234139-selcp9r" updated="20210305234145"}
+    {: id="20210305234027-zn6atd9"}
 
-| 访问控制             | private  | protected  | public   |              |            |           |        |
-| ---------------------- | ---------- | ------------ | ---------- | -------------- | ------------ | ----------- | -------- |
-| 类，方法和变量修饰符 | abstract | class      | extends  | final        | implements | interface | native |
-|                      | new      | static     | strictfp | synchronized | transient  | volatile  |        |
-| 程序控制             | break    | continue   | return   | do           | while      | if        | else   |
-|                      | for      | instanceof | switch   | case         | default    |           |        |
-| 错误处理             | try      | catch      | throw    | throws       | finally    |           |        |
-| 包相关               | import   | package    |          |              |            |           |        |
-| 基本类型             | boolean  | byte       | char     | double       | float      | int       | long   |
-|                      | short    | null       | true     | false        |            |           |        |
-| 变量引用             | super    | this       | void     |              |            |           |        |
-| 保留字               | goto     | const      |          |              |            |           |        |
-{: id="20210301203429-ll6znbk"}
+    | 访问控制             | private  | protected  | public   |               |             |            |        |
+    | ---------------------- | ---------- | ------------ | ---------- | --------------- | ------------- | ------------ | -------- |
+    | 类，方法和变量修饰符 | abstract | class      | extends  | final         | imple-ments | inter-face | native |
+    |                      | new      | static     | strictfp | synchro-nized | transient   | volatile   |        |
+    | 程序控制             | break    | continue   | return   | do            | while       | if         | else   |
+    |                      | for      | instanceof | switch   | case          | default     |            |        |
+    | 错误处理             | try      | catch      | throw    | throws        | finally     |            |        |
+    | 包相关               | import   | package    |          |               |             |            |        |
+    | 基本类型             | boolean  | byte       | char     | double        | float       | int        | long   |
+    |                      | short    | null       | true     | false         |             |            |        |
+    | 变量引用             | super    | this       | void     |               |             |            |        |
+    | 保留字               | goto     | const      |          |               |             |            |        |
+    {: id="20210301203429-ll6znbk" updated="20210305235348"}
+  {: id="20210305233940-x1mcvq5"}
+- {: id="20210305234422-lfvsdn6" fold="1"}#### 自增自减运算符
+  {: id="20210305234422-fslu2jv" updated="20210305234957"}
 
-#### 自增自减运算符
-{: id="20210301203429-2vak5vm"}
 
-在写代码的过程中，常见的一种情况是需要某个整数类型变量增加 1或减少 1，Java 提供了一种特殊的运算符，用于这种表达式，叫做自增运算符（++)和自减运算符（--）。
-{: id="20210301203429-ww17oz6"}
+  - {: id="20210305234723-ssd7jlg"}定义
+    {: id="20210305234746-x2414ze" updated="20210305234749"}
 
-++和--运算符可以放在变量之前，也可以放在变量之后，当运算符放在变量之前时(前缀)，先自增/减，再赋值；当运算符放在变量之后时(后缀)，先赋值，再自增/减。例如，当 `b = ++a` 时，先自增（自己增加 1），再赋值（赋值给 b）；当 `b = a++` 时，先赋值(赋值给 b)，再自增（自己增加 1）。也就是，++a 输出的是 a+1的值，a++输出的是 a 值。用一句口诀就是：“符号在前就先加/减，符号在后就后加/减”。
-{: id="20210301203429-51t89fr"}
+    - {: id="20210305234746-m135gam" updated="20210305234709"}自增运算符`++`
+      {: id="20210305234746-sgncw2e" updated="20210305234754"}
+    - {: id="20210305234754-8nrml9a" updated="20210305234709"}自减运算符`--`
+      {: id="20210305234754-kshwjgy" updated="20210305234800"}
+    {: id="20210305234751-gtnvmj8"}
+  - {: id="20210305234723-8kdy6a4"}用法
+    {: id="20210305234723-6f8ecgw" updated="20210305234925"}
 
-#### . continue、break、和 return 的区别是什么？
-{: id="20210301203429-adyv7y7"}
+    - {: id="20210305234926-4gdhffm"}当运算符放在变量之前时(前缀)，先自增/减，再赋值
+      {: id="20210305234926-44nnb4z" updated="20210305234936"}
+    - {: id="20210305234936-kvwezzz"}当运算符放在变量之后时(后缀)，先赋值，再自增/减
+      {: id="20210305234936-ci8im62" updated="20210305235359"}
+    {: id="20210305234927-loosb0k"}
+  {: id="20210305234610-291icfq"}
+- {: id="20210305235412-nrlo9ux" fold="1"}#### continue、break、和 return 的区别
+  {: id="20210305235412-1r6dwut" updated="20210306000349"}
 
-在循环结构中，当循环条件不满足或者循环次数达到要求时，循环会正常结束。但是，有时候可能需要在循环的过程中，当发生了某种条件之后 ，提前终止循环，这就需要用到下面几个关键词：
-{: id="20210301203429-hnkbyfj"}
 
-1. {: id="20210301203429-raedinw"}continue ：指跳出当前的这一次循环，继续下一次循环。
-   {: id="20210301203429-ozsecmh"}
-2. {: id="20210301203429-wsx0ve8"}break ：指跳出整个循环体，继续执行循环下面的语句。
-   {: id="20210301203429-esounjj"}
-{: id="20210301203429-oyu8epl"}
+  * {: id="20210306000403-64qnvg4"}continue
+    {: id="20210301203429-ozsecmh" updated="20210306000355"}
 
-return 用于跳出所在方法，结束该方法的运行。return 一般有两种用法：
-{: id="20210301203429-yv2g91d"}
+    * {: id="20210301203429-raedinw"}定义
+      {: id="20210306000403-z9tbfag" updated="20210306000408"}
 
-1. {: id="20210301203429-0b3i157"}`return;` ：直接使用 return 结束方法执行，用于没有返回值函数的方法
-   {: id="20210301203429-5jyy0uq"}
-2. {: id="20210301203429-lrqj1ez"}`return value;` ：return 一个特定值，用于有返回值函数的方法
-   {: id="20210301203429-rydz53k"}
-{: id="20210301203429-b09r9z2"}
+      * {: id="20210306000355-pxwnbh5"}指跳出当前的这一次循环，继续下一次循环。
+        {: id="20210306000355-75u23wb" updated="20210306000355"}
+      {: id="20210306000404-0ukqwwm"}
+    {: id="20210306000355-e9yk8kw"}
+  * {: id="20210306000411-xesjnim"}break
+    {: id="20210301203429-esounjj" updated="20210306000358"}
 
-#### Java 泛型了解么？什么是类型擦除？介绍一下常用的通配符？
-{: id="20210301203429-9hln54g"}
+    * {: id="20210301203429-wsx0ve8"}定义
+      {: id="20210306000411-q2gtqda" updated="20210306000414"}
 
-Java 泛型（generics）是 JDK 5中引入的一个新特性, 泛型提供了编译时类型安全检测机制，该机制允许程序员在编译时检测到非法的类型。泛型的本质是参数化类型，也就是说所操作的数据类型被指定为一个参数。
-{: id="20210301203429-34y23d1"}
+      * {: id="20210306000358-p09m1qi"}指跳出整个循环体，继续执行循环下面的语句。
+        {: id="20210306000358-6ubt3r0" updated="20210306000358"}
+      {: id="20210306000412-azcgio1"}
+    {: id="20210306000359-00zh2wd"}
+  {: id="20210306000146-7bhv41x"}
 
-**Java 的泛型是伪泛型，这是因为 Java 在编译期间，所有的泛型信息都会被擦掉，这也就是通常所说类型擦除 。** 更多关于类型擦除的问题，可以查看这篇文章：[《Java 泛型类型擦除以及类型擦除带来的问题》](https://www.cnblogs.com/wuqinglong/p/9456193.html) 。
-{: id="20210301203429-odb5ogy"}
+  - {: id="20210306000419-kibpkkw"}return
+    {: id="20210306000145-br8dzbi" updated="20210306000419"}
 
-```java
-List<Integer> list = new ArrayList<>();
+    - {: id="20210306000422-pa45xbk"}定义
+      {: id="20210306000423-kf4bfi9" updated="20210306000427"}
 
-list.add(12);
-//这里直接添加会报错
-list.add("a");
-Class<? extends List> clazz = list.getClass();
-Method add = clazz.getDeclaredMethod("add", Object.class);
-//但是通过反射添加，是可以的
-add.invoke(list, "kl");
+      - {: id="20210306000422-x5cxz9b"}用于跳出所在方法，结束该方法的运行
+        {: id="20210306000422-jz38typ" updated="20210306000422"}
+      {: id="20210306000431-5ezreni"}
+    - {: id="20210306000216-vu0i529"}用法
+      {: id="20210306000216-gu0aa7n" updated="20210306000220"}
 
-System.out.println(list)
-```
-{: id="20210301203429-1ti3wrh"}
+      - {: id="20210306000307-2j9v1wu"}`return;`
+        {: id="20210306000307-t86796s" updated="20210306000334"}
 
-泛型一般有三种使用方式:泛型类、泛型接口、泛型方法。
-{: id="20210301203429-afaamrf"}
+        - {: id="20210306000334-zq395m1"}直接使用 return 结束方法执行，用于没有返回值函数的方法
+          {: id="20210306000334-xltdtq9" updated="20210306000334"}
+        {: id="20210306000335-napcd1t"}
+      {: id="20210301203429-5jyy0uq" updated="20210306000306"}
 
-**泛型类**：
-{: id="20210301203429-xav5d1u"}
+      - {: id="20210306000329-riaw4vs"}`return value;`
+        {: id="20210306000329-z3qav1u" updated="20210306000338"}
 
-```java
-//此处T可以随便写为任意标识，常见的如T、E、K、V等形式的参数常用于表示泛型
-//在实例化泛型类时，必须指定T的具体类型
-public class Generic<T>{
+        - {: id="20210306000338-8cllqd2"}return 一个特定值，用于有返回值函数的方法
+          {: id="20210306000338-brgy5ce" updated="20210306000338"}
+        {: id="20210306000339-kkq32iq"}
+      {: id="20210301203429-rydz53k" updated="20210306000329"}
+    {: id="20210306000252-rngiobp"}
+  {: id="20210306000252-uuqsfiv"}
+- {: id="20210306001124-f6jwt1m"}#### Java 泛型（generics）#不懂#
+  {: id="20210306001124-574dolq" updated="20210306002550"}
 
-    private T key;
 
-    public Generic(T key) {
-        this.key = key;
-    }
+  - {: id="20210306001138-uu9t9kd" updated="20210306001209"}定义
+    {: id="20210306001440-k6tgaid" updated="20210306001444"}
 
-    public T getKey(){
-        return key;
-    }
-}
-```
-{: id="20210301203429-71llfuq"}
+    - {: id="20210306001440-oqza20e"}JDK 5中引入的一个新特性
+      {: id="20210306001440-bxmzdk0" updated="20210306001440"}
+    - {: id="20210306001143-t9fbby4"}提供了编译时类型安全检测机制
+      {: id="20210306001143-cod6cqm" updated="20210306001148"}
 
-如何实例化泛型类：
-{: id="20210301203429-tzeq9z1"}
+      - {: id="20210306001148-5x53mmg"}该机制允许程序员在编译时检测到非法的类型
+        {: id="20210306001148-c7z0bbh" updated="20210306001153"}
+      {: id="20210306001449-ycsd133"}
+    {: id="20210306001155-59c0po1"}
+  - {: id="20210306001153-g83euvx" fold="1" updated="20210306001459"}注解
+    {: id="20210306001513-tgqsme4" updated="20210306001518"}
 
-```java
-Generic<Integer> genericInteger = new Generic<Integer>(123456);
-```
-{: id="20210301203429-5vrtsz6"}
+    - {: id="20210306001513-dk8joo2"}泛型的本质是参数化类型
+      {: id="20210306001513-aoc5lyo" updated="20210306001513"}
 
-**泛型接口** ：
+      - {: id="20210306001459-xpps7b8"}即所操作的数据类型被指定为一个参数
+        {: id="20210306001459-8xcovlh" updated="20210306001506"}
+      {: id="20210306001520-sfanch1"}
+    - {: id="20210306001224-9chh8hw"}**Java 的泛型是伪泛型**
+      {: id="20210306001224-ffe2i4x" updated="20210306002539"}
+
+      - {: id="20210306001527-ka7vtko"}**这是因为 Java 在编译期间，所有的泛型信息都会被擦掉，这也就是通常所说类型擦除 。**
+        {: id="20210306001527-t5f21zh" updated="20210306001527"}
+      - {: id="20210306001231-nz39leg"}更多关于类型擦除的问题，可以查看[《Java 泛型类型擦除以及类型擦除带来的问题》](https://www.cnblogs.com/wuqinglong/p/9456193.html)
+        {: id="20210306001231-n8j35li" updated="20210306001557"}
+
+        ```java
+        List<Integer> list = new ArrayList<>();
+
+        list.add(12);
+        //这里直接添加会报错
+        list.add("a");
+        Class<? extends List> clazz = list.getClass();
+        Method add = clazz.getDeclaredMethod("add", Object.class);
+        //但是通过反射添加，是可以的
+        add.invoke(list, "kl");
+
+        System.out.println(list)
+        ```
+        {: id="20210301203429-1ti3wrh"}
+      {: id="20210306001528-uglwkmx"}
+    {: id="20210306001500-t0d0r64"}
+  - {: id="20210306001802-0kee38s"}使用方式
+    {: id="20210306001802-xoroe91" updated="20210306001815"}
+
+    - {: id="20210306001849-m0p3973"}**泛型类**
+      {: id="20210306001815-4grpdpi" updated="20210306002752"}
+
+      - {: id="20210306001815-vdqx3lr"}
+        ```java
+        //此处T可以随便写为任意标识，常见的如T、E、K、V等形式的参数常用于表示泛型
+        //在实例化泛型类时，必须指定T的具体类型
+        public class Generic<T>{
+
+            private T key;
+
+            public Generic(T key) {
+                this.key = key;
+            }
+
+            public T getKey(){
+                return key;
+            }
+        }
+        ```
+        {: id="20210301203429-71llfuq"}
+      - {: id="20210306002034-27ji9ll"}如何实例化泛型类
+        {: id="20210306002034-gfiosxe"}
+
+        ```java
+        Generic<Integer> genericInteger = new Generic<Integer>(123456);
+        ```
+        {: id="20210301203429-5vrtsz6"}
+      {: id="20210306002025-0h313pq"}
+    - {: id="20210306001820-hnp5qgb"}**泛型接口**
+      {: id="20210306001820-j0i30wh" updated="20210306002759"}
+
+      - {: id="20210306002059-ijdvqki"}
+        ```java
+        public interface Generator<T> {
+            public T method();
+        }
+        ```
+        {: id="20210301203429-2y1xy00"}
+      {: id="20210306002100-4eo1t71"}
+
+      - {: id="20210306002116-k1g9pgv"}实现泛型接口，不指定类型
+        {: id="20210306002116-j0koruz" updated="20210306002119"}
+
+        ```java
+        class GeneratorImpl<T> implements Generator<T>{
+            @Override
+            public T method() {
+                return null;
+            }
+        }
+        ```
+        {: id="20210301203429-nfz5fia"}
+      {: id="20210301203429-mmad78c" updated="20210306002116"}
+
+      - {: id="20210306002436-70ntjuo"}实现泛型接口，指定类型：
+        {: id="20210306002436-g5k3la4"}
+
+        ```java
+        class GeneratorImpl<T> implements Generator<String>{
+            @Override
+            public String method() {
+                return "hello";
+            }
+        }
+        ```
+        {: id="20210301203429-yr8270v"}
+      {: id="20210301203429-veomhss" updated="20210306002436"}
+    - {: id="20210306001823-k5iru9j"}**泛型方法**
+      {: id="20210306001823-21cryah" updated="20210306002805"}
+
+      - {: id="20210306002503-q05ww6m"}
+        ```java
+           public static < E > void printArray( E[] inputArray )
+           {
+                 for ( E element : inputArray ){
+                    System.out.printf( "%s ", element );
+                 }
+                 System.out.println();
+            }
+        ```
+        {: id="20210301203429-2zj5f5y"}
+      {: id="20210306002504-gqnghmz"}
+
+      - {: id="20210306002524-5yka68l"}使用
+        {: id="20210306002524-7bp9t6g" updated="20210306002526"}
+
+        ```java
+        // 创建不同类型数组： Integer, Double 和 Character
+        Integer[] intArray = { 1, 2, 3 };
+        String[] stringArray = { "Hello", "World" };
+        printArray( intArray  );
+        printArray( stringArray  );
+        ```
+        {: id="20210301203429-yqp5g5i"}
+      {: id="20210301203429-riaa931" updated="20210306002524"}
+    {: id="20210306001816-k7mtksn"}
+  - {: id="20210306002739-ttbbgid"}**常用的通配符为： T，E，K，V，？**
+    {: id="20210306002739-ldcqb42"}
+
+    - {: id="20210301203429-bqfvdri"}？ 表示不确定的 Java 类型
+      {: id="20210301203429-1gkfnou"}
+    - {: id="20210301203429-p7lp8ba"}T (type) 表示具体的一个 Java 类型
+      {: id="20210301203429-w0nzvp3"}
+    - {: id="20210301203429-whwkaop"}K V (key value) 分别代表 Java 键值中的 Key Value
+      {: id="20210301203429-lc5hvm1"}
+    - {: id="20210301203429-u8gf2e3"}E (element) 代表 Element
+      {: id="20210301203429-udb2hu8"}
+    {: id="20210301203429-vwqmppv"}
+  {: id="20210306001139-hhyu8mx"}
+{: id="20210306000253-l6geewy"}
+
+{: id="20210301203429-xav5d1u" updated="20210306002053"}
+
 {: id="20210301203429-ivmiwyv"}
-
-```java
-public interface Generator<T> {
-    public T method();
-}
-```
-{: id="20210301203429-2y1xy00"}
-
-实现泛型接口，不指定类型：
-{: id="20210301203429-mmad78c"}
-
-```java
-class GeneratorImpl<T> implements Generator<T>{
-    @Override
-    public T method() {
-        return null;
-    }
-}
-```
-{: id="20210301203429-nfz5fia"}
-
-实现泛型接口，指定类型：
-{: id="20210301203429-veomhss"}
-
-```java
-class GeneratorImpl<T> implements Generator<String>{
-    @Override
-    public String method() {
-        return "hello";
-    }
-}
-```
-{: id="20210301203429-yr8270v"}
-
-**泛型方法** ：
-{: id="20210301203429-5vxpzbs"}
-
-```java
-   public static < E > void printArray( E[] inputArray )
-   {
-         for ( E element : inputArray ){
-            System.out.printf( "%s ", element );
-         }
-         System.out.println();
-    }
-```
-{: id="20210301203429-2zj5f5y"}
-
-使用：
-{: id="20210301203429-riaa931"}
-
-```java
-// 创建不同类型数组： Integer, Double 和 Character
-Integer[] intArray = { 1, 2, 3 };
-String[] stringArray = { "Hello", "World" };
-printArray( intArray  );
-printArray( stringArray  );
-```
-{: id="20210301203429-yqp5g5i"}
-
-**常用的通配符为： T，E，K，V，？**
-{: id="20210301203429-vfvkvyh"}
-
-- {: id="20210301203429-bqfvdri"}？ 表示不确定的 Java 类型
-  {: id="20210301203429-1gkfnou"}
-- {: id="20210301203429-p7lp8ba"}T (type) 表示具体的一个 Java 类型
-  {: id="20210301203429-w0nzvp3"}
-- {: id="20210301203429-whwkaop"}K V (key value) 分别代表 Java 键值中的 Key Value
-  {: id="20210301203429-lc5hvm1"}
-- {: id="20210301203429-u8gf2e3"}E (element) 代表 Element
-  {: id="20210301203429-udb2hu8"}
-{: id="20210301203429-vwqmppv"}
 
 更多关于 Java 泛型中的通配符可以查看这篇文章：[《聊一聊-JAVA 泛型中的通配符 T，E，K，V，？》](https://juejin.im/post/5d5789d26fb9a06ad0056bd9)
 {: id="20210301203429-1esrjzy"}
