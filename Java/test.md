@@ -16,10 +16,13 @@
 ###### 123456
 {: id="20210305140331-fpmb1ro" updated="20210305195945"}
 
-```m
-
+```mermaid
+graph TD
+    	UsernamePasswordAuthenticationFIlter --未认证---> AuthenticationManager
+	AuthenticationManager -- 委托--->AuthenticationProvider
+	AuthenticationProvider -- 关联--- UserDetailsService
 ```
-{: id="20210305195950-sfe2uv9" updated="20210305200331"}
+{: id="20210305195950-sfe2uv9" updated="20210305201617"}
 
 
 {: id="20210301233948-5ib86kr" type="doc"}
