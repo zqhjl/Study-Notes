@@ -1009,13 +1009,13 @@
       {: id="20210301203429-a68shx0" updated="20210306214439"}
     {: id="20210306103748-amxp3vo"}
   {: id="20210306094936-0jf2neo"}
+- {: id="20210306231052-ko7muy7"}`hashCode()`与`equals()`
+  {: id="20210306231052-r7bi563" updated="20210306231118"}
+
+  - {: id="20210306231121-2qafh79"}面试官可能会问你：“你重写过 `hashcode` 和 `equals`么，为什么重写 `equals` 时必须重写 `hashCode` 方法？”
+    {: id="20210301203429-tsqsfsd"}
+  {: id="20210306231135-mtxrk5x"}
 {: id="20210306000253-l6geewy" updated="20210306215524"}
-
-#### hashCode()与 equals()
-{: id="20210301203429-re0d4hd"}
-
-面试官可能会问你：“你重写过 `hashcode` 和 `equals`么，为什么重写 `equals` 时必须重写 `hashCode` 方法？”
-{: id="20210301203429-tsqsfsd"}
 
 **1)hashCode()介绍:**
 {: id="20210301203429-zqaa02s"}
