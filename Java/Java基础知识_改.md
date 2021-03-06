@@ -978,8 +978,8 @@
               {: id="20210306215228-6u1qefg"}
             {: id="20210306215246-sbhioil"}
           {: id="20210306215253-oxijwzr"}
-        - {: id="20210301203429-2i3mr3s"}`String` 类中的 `equals` 方法是被重写过的，比较的是对象的值
-          {: id="20210301203429-a31s9rd" updated="20210306215406"}
+        - {: id="20210301203429-2i3mr3s"}`String` 类中的 `equals` 方法是Java被重写过的，比较的是对象的值#不懂#
+          {: id="20210301203429-a31s9rd" updated="20210306215523"}
 
           ```java
           public boolean equals(Object anObject) {
@@ -1004,12 +1004,12 @@
               return false;
           }
           ```
-          {: id="20210301203429-fzzcvdz" updated="20210306215325"}
+          {: id="20210301203429-fzzcvdz" updated="20210306215812"}
         {: id="20210301203429-3gi8jnx"}
       {: id="20210301203429-a68shx0" updated="20210306214439"}
     {: id="20210306103748-amxp3vo"}
   {: id="20210306094936-0jf2neo"}
-{: id="20210306000253-l6geewy"}
+{: id="20210306000253-l6geewy" updated="20210306215524"}
 
 #### hashCode()与 equals()
 {: id="20210301203429-re0d4hd"}
