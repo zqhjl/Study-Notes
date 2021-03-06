@@ -925,8 +925,8 @@
       - {: id="20210301203429-a0a4l9h"}类没有覆盖 `equals()`方法
         {: id="20210301203429-r0kiz27" updated="20210306112049"}
 
-        - {: id="20210306112049-j7qeq2f"}则通过`equals()`比较该类的两个对象时，等价于通过“==”比较这两个对象。使用的默认是 `Object`类`equals()`方法。
-          {: id="20210306112049-3t5eilb" updated="20210306112049"}
+        - {: id="20210306112049-j7qeq2f"}则通过`equals()`比较该类的两个对象时，等价于通过`==`比较这两个对象。使用的默认是 `Object`类`equals()`方法。
+          {: id="20210306112049-3t5eilb" updated="20210306214550"}
         {: id="20210306112050-9plhcof"}
       - {: id="20210301203429-22nks3y"}类覆盖了 `equals()`方法
         {: id="20210301203429-h5sukv6" updated="20210306112906"}
@@ -938,8 +938,8 @@
             {: id="20210306204643-iqk8h73" updated="20210306214355"}
           {: id="20210306204645-0tbewz1"}
         {: id="20210306112908-34i1pbw"}
-      - {: id="20210306214410-ku5hqtt"}**举个例子**
-        {: id="20210306214410-bdut51k" updated="20210306214427"}
+      - {: id="20210306214410-ku5hqtt"}**举例**
+        {: id="20210306214410-bdut51k" updated="20210306215510"}
 
         ```java
         public class test1 {
@@ -966,43 +966,50 @@
       - {: id="20210306214439-jqvb6k6"}**说明**
         {: id="20210306214439-hik96p5" updated="20210306214446"}
 
-        - {: id="20210301203429-2i3mr3s"}`String` 中的 `equals` 方法是被重写过的，因为 `Object` 的 `equals` 方法是比较的对象的内存地址，而 `String` 的 `equals` 方法比较的是对象的值。
-          {: id="20210301203429-a31s9rd"}
-        - {: id="20210301203429-uvkaada"}当创建 `String` 类型的对象时，虚拟机会在常量池中查找有没有已经存在的值和要创建的值相同的对象，如果有就把它赋给当前引用。如果没有就在常量池中重新创建一个 `String` 对象。
-          {: id="20210301203429-ayuhh59"}
+        - {: id="20210306215213-5rukncc"}当创建 `String` 类型的对象时
+          {: id="20210301203429-ayuhh59" updated="20210306215213"}
+
+          - {: id="20210306215221-da8bsic"}虚拟机会在常量池中查找有没有已经存在的值和要创建的值相同的对象
+            {: id="20210306215213-pqi8j8h" updated="20210306215221"}
+
+            - {: id="20210306215228-ot2et9r"}如果有就把它赋给当前引用
+              {: id="20210306215221-byv6l22" updated="20210306215227"}
+            - {: id="20210301203429-uvkaada"}如果没有就在常量池中重新创建一个 `String` 对象。
+              {: id="20210306215228-6u1qefg"}
+            {: id="20210306215246-sbhioil"}
+          {: id="20210306215253-oxijwzr"}
+        - {: id="20210301203429-2i3mr3s"}`String` 类中的 `equals` 方法是被重写过的，比较的是对象的值
+          {: id="20210301203429-a31s9rd" updated="20210306215406"}
+
+          ```java
+          public boolean equals(Object anObject) {
+              if (this == anObject) {
+                  return true;
+              }
+              if (anObject instanceof String) {
+                  String anotherString = (String)anObject;
+                  int n = value.length;
+                  if (n == anotherString.value.length) {
+                      char v1[] = value;
+                      char v2[] = anotherString.value;
+                      int i = 0;
+                      while (n-- != 0) {
+                          if (v1[i] != v2[i])
+                              return false;
+                          i++;
+                      }
+                      return true;
+                  }
+              }
+              return false;
+          }
+          ```
+          {: id="20210301203429-fzzcvdz" updated="20210306215325"}
         {: id="20210301203429-3gi8jnx"}
       {: id="20210301203429-a68shx0" updated="20210306214439"}
     {: id="20210306103748-amxp3vo"}
   {: id="20210306094936-0jf2neo"}
 {: id="20210306000253-l6geewy"}
-
-`String`类`equals()`方法：
-{: id="20210301203429-61h1ghd"}
-
-```java
-public boolean equals(Object anObject) {
-    if (this == anObject) {
-        return true;
-    }
-    if (anObject instanceof String) {
-        String anotherString = (String)anObject;
-        int n = value.length;
-        if (n == anotherString.value.length) {
-            char v1[] = value;
-            char v2[] = anotherString.value;
-            int i = 0;
-            while (n-- != 0) {
-                if (v1[i] != v2[i])
-                    return false;
-                i++;
-            }
-            return true;
-        }
-    }
-    return false;
-}
-```
-{: id="20210301203429-fzzcvdz"}
 
 #### hashCode()与 equals()
 {: id="20210301203429-re0d4hd"}
