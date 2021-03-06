@@ -1,8 +1,5 @@
 # Java
-{: id="20210305140308-bm7t5g3" updated="20210306144548"}
-
-## Java
-{: id="20210306144538-0r292la" updated="20210306144540"}
+{: id="20210305140308-bm7t5g3" updated="20210306145700"}
 
 ### Java
 {: id="20210305140316-yfhncp7" updated="20210306123151"}
@@ -26,8 +23,6 @@ graph TD
 	AuthenticationProvider -- 关联--- UserDetailsService
 ```
 {: id="20210305195950-sfe2uv9" updated="20210305201617"}
-
-{: id="20210305211124-0iazffs"}
 
 
 {: id="20210301233948-5ib86kr" type="doc"}
