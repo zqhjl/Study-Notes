@@ -934,47 +934,47 @@
         - {: id="20210306112906-q1xxwkd"}一般，我们都覆盖 `equals()`方法来两个对象的内容相等
           {: id="20210306112906-sng26f0" updated="20210306204642"}
 
-          - {: id="20210306204643-5qersj1"}若它们的内容相等，则返回 true(即，认为这两个对象相等)。
-            {: id="20210306204643-iqk8h73" updated="20210306204643"}
+          - {: id="20210306204643-5qersj1"}若它们的内容相等，则返回 true
+            {: id="20210306204643-iqk8h73" updated="20210306214355"}
           {: id="20210306204645-0tbewz1"}
         {: id="20210306112908-34i1pbw"}
+      - {: id="20210306214410-ku5hqtt"}**举个例子**
+        {: id="20210306214410-bdut51k" updated="20210306214427"}
+
+        ```java
+        public class test1 {
+            public static void main(String[] args) {
+                String a = new String("ab"); // a 为一个引用
+                String b = new String("ab"); // b为另一个引用,对象的内容一样
+                String aa = "ab"; // 放在常量池中
+                String bb = "ab"; // 从常量池中查找
+                if (aa == bb) // true
+                    System.out.println("aa==bb");
+                if (a == b) // false，非同一对象
+                    System.out.println("a==b");
+                if (a.equals(b)) // true
+                    System.out.println("aEQb");
+                if (42 == 42.0) { // true
+                    System.out.println("true");
+                }
+            }
+        }
+        ```
+        {: id="20210301203429-beb7tet"}
       {: id="20210301203429-90qlhw0"}
+
+      - {: id="20210306214439-jqvb6k6"}**说明**
+        {: id="20210306214439-hik96p5" updated="20210306214446"}
+
+        - {: id="20210301203429-2i3mr3s"}`String` 中的 `equals` 方法是被重写过的，因为 `Object` 的 `equals` 方法是比较的对象的内存地址，而 `String` 的 `equals` 方法比较的是对象的值。
+          {: id="20210301203429-a31s9rd"}
+        - {: id="20210301203429-uvkaada"}当创建 `String` 类型的对象时，虚拟机会在常量池中查找有没有已经存在的值和要创建的值相同的对象，如果有就把它赋给当前引用。如果没有就在常量池中重新创建一个 `String` 对象。
+          {: id="20210301203429-ayuhh59"}
+        {: id="20210301203429-3gi8jnx"}
+      {: id="20210301203429-a68shx0" updated="20210306214439"}
     {: id="20210306103748-amxp3vo"}
   {: id="20210306094936-0jf2neo"}
 {: id="20210306000253-l6geewy"}
-
-**举个例子：**
-{: id="20210301203429-gdt30ck"}
-
-```java
-public class test1 {
-    public static void main(String[] args) {
-        String a = new String("ab"); // a 为一个引用
-        String b = new String("ab"); // b为另一个引用,对象的内容一样
-        String aa = "ab"; // 放在常量池中
-        String bb = "ab"; // 从常量池中查找
-        if (aa == bb) // true
-            System.out.println("aa==bb");
-        if (a == b) // false，非同一对象
-            System.out.println("a==b");
-        if (a.equals(b)) // true
-            System.out.println("aEQb");
-        if (42 == 42.0) { // true
-            System.out.println("true");
-        }
-    }
-}
-```
-{: id="20210301203429-beb7tet"}
-
-**说明：**
-{: id="20210301203429-a68shx0"}
-
-- {: id="20210301203429-2i3mr3s"}`String` 中的 `equals` 方法是被重写过的，因为 `Object` 的 `equals` 方法是比较的对象的内存地址，而 `String` 的 `equals` 方法比较的是对象的值。
-  {: id="20210301203429-a31s9rd"}
-- {: id="20210301203429-uvkaada"}当创建 `String` 类型的对象时，虚拟机会在常量池中查找有没有已经存在的值和要创建的值相同的对象，如果有就把它赋给当前引用。如果没有就在常量池中重新创建一个 `String` 对象。
-  {: id="20210301203429-ayuhh59"}
-{: id="20210301203429-3gi8jnx"}
 
 `String`类`equals()`方法：
 {: id="20210301203429-61h1ghd"}
