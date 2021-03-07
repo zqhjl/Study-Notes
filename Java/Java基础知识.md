@@ -401,39 +401,39 @@ printArray( stringArray  );
 {: id="20210301221807-jbgk698" parent-fold="1"}
 
 #### ==和 equals 的区别
-{: id="20210301221807-y9h7g50" fold="1"}
+{: id="20210301221807-y9h7g50" fold="0"}
 
 **`==`** : 它的作用是判断两个对象的地址是不是相等。即判断两个对象是不是同一个对象。(**基本数据类型==比较的是值，引用数据类型==比较的是内存地址**)
-{: id="20210301221807-9pcgrd8" parent-fold="1"}
+{: id="20210301221807-9pcgrd8" parent-fold="0"}
 
 > 因为 Java 只有值传递，所以，对于 == 来说，不管是比较基本数据类型，还是引用数据类型的变量，其本质比较的都是值，只是引用类型变量存的值是对象的地址。
 > {: id="20210301221807-6p06n3e"}
-{: id="20210301221807-ehxc7af" parent-fold="1"}
+{: id="20210301221807-ehxc7af" parent-fold="0"}
 
 **`equals()`** : 它的作用也是判断两个对象是否相等，它不能用于比较基本数据类型的变量。`equals()`方法存在于`Object`类中，而`Object`类是所有类的直接或间接父类。
-{: id="20210301221807-myqa6t7" parent-fold="1"}
+{: id="20210301221807-myqa6t7" parent-fold="0"}
 
 `Object`类`equals()`方法：
-{: id="20210301221807-3jdkoun" parent-fold="1"}
+{: id="20210301221807-3jdkoun" parent-fold="0"}
 
 ```java
 public boolean equals(Object obj) {
      return (this == obj);
 }
 ```
-{: id="20210301221807-1jxy37z" parent-fold="1"}
+{: id="20210301221807-1jxy37z" parent-fold="0"}
 
 `equals()` 方法存在两种使用情况：
-{: id="20210301221807-ly2gxzr" parent-fold="1"}
+{: id="20210301221807-ly2gxzr" parent-fold="0"}
 
 - {: id="20210301221806-qvt783d"}情况 1：类没有覆盖 `equals()`方法。则通过`equals()`比较该类的两个对象时，等价于通过“==”比较这两个对象。使用的默认是 `Object`类`equals()`方法。
   {: id="20210301221807-tg0iu9d"}
 - {: id="20210301221806-0jtejn9"}情况 2：类覆盖了 `equals()`方法。一般，我们都覆盖 `equals()`方法来两个对象的内容相等；若它们的内容相等，则返回 true(即，认为这两个对象相等)。
   {: id="20210301221807-h2u8mgo"}
-{: id="20210301221807-ftlcjvn" parent-fold="1"}
+{: id="20210301221807-ftlcjvn" parent-fold="0"}
 
 **举个例子：**
-{: id="20210301221807-rb53jh4" parent-fold="1"}
+{: id="20210301221807-rb53jh4" parent-fold="0"}
 
 ```java
 public class test1 {
@@ -454,19 +454,19 @@ public class test1 {
     }
 }
 ```
-{: id="20210301221807-2qw9sf2" parent-fold="1"}
+{: id="20210301221807-2qw9sf2" parent-fold="0"}
 
 **说明：**
-{: id="20210301221807-5bl8b46" parent-fold="1"}
+{: id="20210301221807-5bl8b46" parent-fold="0"}
 
 - {: id="20210301221806-i06x4m0"}`String` 中的 `equals` 方法是被重写过的，因为 `Object` 的 `equals` 方法是比较的对象的内存地址，而 `String` 的 `equals` 方法比较的是对象的值。
   {: id="20210301221807-saemvrz"}
 - {: id="20210301221806-muxjufn"}当创建 `String` 类型的对象时，虚拟机会在常量池中查找有没有已经存在的值和要创建的值相同的对象，如果有就把它赋给当前引用。如果没有就在常量池中重新创建一个 `String` 对象。
   {: id="20210301221807-4saup8w"}
-{: id="20210301221807-d9jipoj" parent-fold="1"}
+{: id="20210301221807-d9jipoj" parent-fold="0"}
 
 `String`类`equals()`方法：
-{: id="20210301221807-am6zk1m" parent-fold="1"}
+{: id="20210301221807-am6zk1m" parent-fold="0"}
 
 ```java
 public boolean equals(Object anObject) {
@@ -491,7 +491,7 @@ public boolean equals(Object anObject) {
     return false;
 }
 ```
-{: id="20210301221807-lw4ps93" parent-fold="1"}
+{: id="20210301221807-lw4ps93" parent-fold="0"}
 
 #### hashCode()与 equals()
 {: id="20210301221807-gez6hnb"}
