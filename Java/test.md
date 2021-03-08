@@ -1,16 +1,17 @@
-- {: id="20210307233432-jyx89f7"}123
-  {: id="20210307233432-i1c9auq" updated="20210307233433"}
+- {: id="20210308193728-zbiiux6"}
+  ```java
+  private static class CharacterCache {
+      private CharacterCache(){}
 
-  - {: id="20210307233434-azqrxe8"}123
-    {: id="20210307233434-r9f4f3p" updated="20210307233435"}
-  - {: id="20210307233436-xbul15t"}123
-    {: id="20210307233436-b6iwawz" updated="20210307233437"}
-  - {: id="20210308101913-s6dsw7e"}((20210307233436-xbul15t "123"))
-    {: id="20210308101913-4locwrw" updated="20210308101922"}
-  {: id="20210308102240-ooga3x9"}
-{: id="20210305140308-bm7t5g3" updated="20210308101917"}
-
-{: id="20210305195950-sfe2uv9"}
+      static final Character cache[] = new Character[127 + 1];
+      static {
+          for (int i = 0; i < cache.length; i++)
+              cache[i] = new Character((char)i);
+      }
+  }
+  ```
+  {: id="20210308193728-eln0mjf" updated="20210308193732"}
+{: id="20210308193553-g7ltboa" updated="20210308193728"}
 
 
 {: id="20210301233948-5ib86kr" type="doc"}
