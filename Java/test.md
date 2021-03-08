@@ -1,17 +1,31 @@
-- {: id="20210308193728-zbiiux6"}
-  ```java
-  private static class CharacterCache {
-      private CharacterCache(){}
+- {: id="20210308193926-b47b4tf"}123456
+  {: id="20210308193926-cksn7sf" updated="20210308193928"}
 
-      static final Character cache[] = new Character[127 + 1];
-      static {
-          for (int i = 0; i < cache.length; i++)
-              cache[i] = new Character((char)i);
+  ```java
+  public boolean equals(Object anObject) {
+      if (this == anObject) {
+          return true;
       }
+      if (anObject instanceof String) {
+          String anotherString = (String)anObject;
+          int n = value.length;
+          if (n == anotherString.value.length) {
+              char v1[] = value;
+              char v2[] = anotherString.value;
+              int i = 0;
+              while (n-- != 0) {
+                  if (v1[i] != v2[i])
+                      return false;
+                  i++;
+              }
+              return true;
+          }
+      }
+      return false;
   }
   ```
-  {: id="20210308193728-eln0mjf" updated="20210308193732"}
-{: id="20210308193553-g7ltboa" updated="20210308193728"}
+  {: id="20210308193728-eln0mjf" updated="20210308193939"}
+{: id="20210308193922-l3gpl99" updated="20210308193926"}
 
 
 {: id="20210301233948-5ib86kr" type="doc"}
