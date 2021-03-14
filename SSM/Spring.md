@@ -119,9 +119,29 @@
       {: id="20210314230531-klxqa02" updated="20210314230554"}
     - {: id="20210314230556-pzt1gyn"}Spring MvC就是对这套流程的封装，屏蔽了很多底层代码，开放岀接口，让开发者可以更加轻松、便捷地完成基于MVC模式的Web开发。
       {: id="20210314230556-6ubplxk" updated="20210314230608"}
-    {: id="20210314230531-e2lw6o5"}
+    {: id="20210314232029-3xru8vk"}
+  - {: id="20210314232027-5f49408"}Spring Mvc的核心组件
+    {: id="20210314232027-j98wtje" updated="20210314232127"}
+
+    - {: id="20210314232128-xpjiz9q"}DispatcherServlet：前置控制器，是整个流程控制的核心，控制其他组件的执行，进行统一调度，降低组件之间的耦合性，相当于总指挥
+      {: id="20210314232128-ma0dkf7" updated="20210314232132"}
+    - {: id="20210314232158-fx6mons"}Handler：处理器，完成具体的业务逻辑，相当于 Servlet或 Action
+      {: id="20210314232158-4ukivs3" updated="20210314232158"}
+    - {: id="20210314232133-ektzxic"}HandlerMapping:DispatcherServlet接收到请求之后，通过 HandlerMapping将不同的请求映射到不同的Handle
+      {: id="20210314232133-ph1pq6a" updated="20210314232137"}
+    - {: id="20210314232138-zcg8rl3"}HandlerInterceptor：处理器拦截器，是一个接口，如果需要完成一些拦截处理，可以实现该接口。
+      {: id="20210314232138-e2ouwr3" updated="20210314232141"}
+    - {: id="20210314232142-22589s1"}Handler Execution Chain：处理器执行链，包括两部分内容：Handler和 HandlerInterceptor（系统会有一个默认的 HandlerInterceptor，如果需要额外设置拦截，可以添加拦截器）
+      {: id="20210314232142-q7rr96o" updated="20210314232145"}
+    - {: id="20210314232146-ir941h8"}HandlerAdapter：处理器适配器， Handler执行业务方法之前，需要进行一系列的操作，包括表单数据的验证、数据类型的转换、将表单数据封装到 JavaBean等，这些操作都是由 HandlerApater来完成，开发者只需将注意力集中业务逻辑的处理上， DispatcherServlet通过 HandlerAdapter执行不同的 Handler。
+      {: id="20210314232146-bwql796" updated="20210314232150"}
+    - {: id="20210314232150-71jwdhc"}ModelAndview：装载了模型数据和视图信息，作为 Handler的处理结果，返回绐 Dispatcher Servlet。
+      {: id="20210314232150-63mvaa0" updated="20210314232150"}
+    - {: id="20210314232317-c2ve2ne"}View Resolver：视图解析器， Dispatche Servlet通过它将逻辑视图解析为物理视图，最终将渲染结果响应给客户端
+      {: id="20210314232317-rvrrjan"}
+    {: id="20210314232129-3m0b7sa"}
   {: id="20210314230240-kpo586q"}
-{: id="20210314215524-s1vmtw8" updated="20210314230525"}
+{: id="20210314215524-s1vmtw8" updated="20210314232409"}
 
 {: id="20210314215615-njk6fhn"}
 
