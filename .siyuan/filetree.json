@@ -49,6 +49,11 @@
         {
           "name": "Java基础知识.md",
           "path": "/Java/Java基础知识.md"
+        },
+        {
+          "name": "SSM",
+          "path": "/Java/SSM/",
+          "isDir": true
         }
       ]
     },
@@ -68,6 +73,17 @@
         {
           "name": "test.md",
           "path": "/面向对象程序设计——Java语言/test.md"
+        }
+      ]
+    },
+    {
+      "name": "SSM",
+      "path": "/SSM/",
+      "isDir": true,
+      "children": [
+        {
+          "name": "Spring.md",
+          "path": "/SSM/Spring.md"
         }
       ]
     }
