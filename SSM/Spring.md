@@ -137,16 +137,38 @@
       {: id="20210314232146-bwql796" updated="20210314232150"}
     - {: id="20210314232150-71jwdhc"}ModelAndview：装载了模型数据和视图信息，作为 Handler的处理结果，返回绐 Dispatcher Servlet。
       {: id="20210314232150-63mvaa0" updated="20210314232150"}
-    - {: id="20210314232317-c2ve2ne"}View Resolver：视图解析器， Dispatche Servlet通过它将逻辑视图解析为物理视图，最终将渲染结果响应给客户端
-      {: id="20210314232317-rvrrjan"}
+    - {: id="20210314235111-cip8h3u"}View Resolver：视图解析器， Dispatche Servlet通过它将逻辑视图解析为物理视图，最终将渲染结果响应给客户端
+      {: id="20210314232317-rvrrjan" updated="20210314235110"}
+    {: id="20210314235149-tzbzbam"}
+  - {: id="20210314234854-9f0t2rn"}Spring MVc的工作流程
+    {: id="20210314235111-hcf1apt"}
+
+    - {: id="20210314235151-o4rwx3s"}客户端请求被 Disptacher Servlet接收
+      {: id="20210314235151-cta10jz" updated="20210314235209"}
+    - {: id="20210314235209-tdp8jsp"}根据 Handler Mapping映射到 Handler
+      {: id="20210314235209-c5zalq3" updated="20210314235209"}
+    - {: id="20210314235213-ndgd4bu"}生成 Handler和 HandlerInterceptor。
+      {: id="20210314235213-z1bkrlh" updated="20210314235213"}
+    - {: id="20210314235215-n685wzi"}Handler和 HandlerInterceptor以 Handler Execution Chain的形式一并返回给 Disptacher Servlet
+      {: id="20210314235215-j59yyjs" updated="20210314235219"}
+    - {: id="20210314235220-cwrqtns"}DispatcherServlet通过 HandlerAdapter调用 Handler的方法完成业务逻辑处理。
+      {: id="20210314235220-x0dda3u" updated="20210314235223"}
+    - {: id="20210314235223-cugd7lh"}Handler返回一个 ModelAndview给 DispatcherServlet
+      {: id="20210314235223-6jvwgrq" updated="20210314235223"}
+    - {: id="20210314235227-5h09cyf"}DispatcherServlet将获取的 ModelAndview对象传给 ViewResolver视图解析器，将逻辑视图解析为物理视图vew。
+      {: id="20210314235227-s7qdwek" updated="20210314235235"}
+    - {: id="20210314235236-76xa4au"}View Resovler返回一个vew给 DispatcherServlet DispatcherServlet根据view进行视图渲染（将模型数据Mode填充到视图vew中）。
+      {: id="20210314235236-f35ofoh" updated="20210314235239"}
+    - {: id="20210314235240-kau0yht"}DispatcherServlet将渲染后的结果响应给客户端
+      {: id="20210314235240-tigsvip" updated="20210314235240"}
 
       ![image.png](assets/image-20210314233000-l7v83jx.png)
       {: id="20210314232956-efiu6ll" updated="20210314233000"}
-    {: id="20210314232129-3m0b7sa"}
+    {: id="20210314235152-2emdbj7"}
   {: id="20210314230240-kpo586q"}
-{: id="20210314215524-s1vmtw8" updated="20210314232409"}
+{: id="20210314215524-s1vmtw8" updated="20210314235100"}
 
-{: id="20210314215615-njk6fhn"}
+{: id="20210314235254-1k8rpt6"}
 
 
 {: id="20210314215524-0qa1um9" type="doc"}
