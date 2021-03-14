@@ -752,19 +752,16 @@
         //此处T可以随便写为任意标识，常见的如T、E、K、V等形式的参数常用于表示泛型
         //在实例化泛型类时，必须指定T的具体类型
         public class Generic<T>{
-
             private T key;
-
             public Generic(T key) {
                 this.key = key;
             }
-
             public T getKey(){
                 return key;
             }
         }
         ```
-        {: id="20210301203429-71llfuq"}
+        {: id="20210301203429-71llfuq" updated="20210314134325"}
       - {: id="20210306002034-27ji9ll"}如何实例化泛型类
         {: id="20210306002034-gfiosxe"}
 
