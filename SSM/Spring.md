@@ -207,14 +207,40 @@
     - {: id="20210315100911-ipccq8w"}使用 JavaBean绑定参数
       {: id="20210315100911-97le5lf"}
 
-      - {: id="20210315100927-jdyj62c"}Spring MVC会根据请求参数名和 JavaBean属性名进行自动匹配，自动为对象填充属性值，同时支持及联属性。
-        {: id="20210315100927-8guw98a" updated="20210315100927"}
-      {: id="20210315100941-gkkovr0"}
+      - {: id="20210315100927-jdyj62c"}Spring MVC会根据请求参数名和 JavaBean属性名进行自动匹配，自动为对象填充属性值，同时支持级联属性
+        {: id="20210315100927-8guw98a" updated="20210315103215"}
+      {: id="20210315103216-9arpriq"}
+    - {: id="20210315103215-2nom1aq"}如果出现中文乱码问题，只需在 web. xm添加 Spring MVC自带的过滤器即可
+      {: id="20210315103215-h17umm5" updated="20210315103308"}
+    - {: id="20210315103840-mdkjnbw"}JSP页面的转发和重定向
+      {: id="20210315103840-i1mkkoz" updated="20210315103846"}
+
+      - {: id="20210315103848-40ne3eu"}Spring Mvc默认是以转发的形式响应JSP
+        {: id="20210315103848-n90lqnh" updated="20210315103853"}
+      - {: id="20210315103854-n5evh1e"}
+        {: id="20210315103854-n62ukqz"}
+      {: id="20210315103848-8uzpned"}
     {: id="20210315085948-nwsxnme"}
   {: id="20210314230240-kpo586q"}
-{: id="20210314215524-s1vmtw8" updated="20210315100924"}
+{: id="20210314215524-s1vmtw8" updated="20210315103841"}
 
-{: id="20210315093613-u4tf4kn"}
+```xml
+<filter>
+    <filter-name>encodingFilter</filter-name>
+    <filter-class>org. springframework web filter Character EncodingFilter</filter-class>
+    <init-param>
+        <param-name>encoding</param-name>
+        <param-value>UTF-8</param-value>
+    </init-param>
+</filter>
+<filter-mapping>
+    <filter-name>encodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+</filter-mapping>
+```
+{: id="20210315093613-u4tf4kn" updated="20210315103339"}
+
+{: id="20210315103537-rwcvtyv"}
 
 
 {: id="20210314215524-0qa1um9" type="doc"}
