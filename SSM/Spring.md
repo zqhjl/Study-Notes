@@ -161,12 +161,12 @@
       {: id="20210314235236-f35ofoh" updated="20210314235239"}
     - {: id="20210314235240-kau0yht"}DispatcherServlet将渲染后的结果响应给客户端
       {: id="20210314235240-tigsvip" updated="20210314235240"}
+
+      ![image.png](assets/image-20210314233000-l7v83jx.png)
+      {: id="20210314232956-efiu6ll" updated="20210314233000"}
     {: id="20210314235152-2emdbj7"}
   {: id="20210314230240-kpo586q"}
 {: id="20210314215524-s1vmtw8" updated="20210314235100"}
-
-![image.png](assets/image-20210314233000-l7v83jx.png)
-{: id="20210314232956-efiu6ll" updated="20210314233000"}
 
 
 {: id="20210314215524-0qa1um9" type="doc"}
