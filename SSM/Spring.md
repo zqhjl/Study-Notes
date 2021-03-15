@@ -238,11 +238,23 @@
       - {: id="20210315104018-r0589ml"}重定向：redirect:
         {: id="20210315104018-ozbu2w6" updated="20210315104858"}
       {: id="20210315104902-f11bd4y"}
-    - {: id="20210315104902-va80o2i"}
-      {: id="20210315104902-4kq3oia"}
-    {: id="20210315085948-nwsxnme"}
+    {: id="20210315105909-yg2qsod"}
+  - {: id="20210315104902-va80o2i"}Spring Mvc数据绑定
+    {: id="20210315104902-4kq3oia"}
+
+    - {: id="20210315105933-di7zods"}数据绑定：在后端的业务方法中直接获取客户端HTP请求中的参数，将请求参数映射到业务方法的形参中， Spring Mvc中数据绑定的工作是由 HandlerAdapter来完成的。
+      {: id="20210315105933-35ngg5q" updated="20210315105933"}
+    - {: id="20210315110052-nagd1js"}@Response Body表示 Spring MvC会直接将业务方法的返回值响应给客户端，如果不加@ Response Body注解， Spring Mvc会将业务方法的放回值传递给 DispatcherServlet，再由 DisptacherServlet调用 ViewResolver对返回值进行解析，映射到一个JSP资源
+      {: id="20210315110052-h5f5fyp" updated="20210315110103"}
+    - {: id="20210315110820-b5qe6f0"}包装类
+      {: id="20210315110820-dr2hawv"}
+    - {: id="20210315110853-zma3ppz"}可以接收nul，当HTTP请求没有参数时，使用包装类定义形参的数据类型，程序不会抛出异常
+      @RequestParam vaue="num"：将HTTP请求中名为num的参数赋给形参id。
+      equried：设置num是否为必填项，true表示必填， false表示非必填，可省略defaultValue=“0"：如果HTTP请求中没有num参数，默认值为0
+      {: id="20210315110853-tlwze4x" updated="20210315110853"}
+    {: id="20210315105934-whnk73q"}
   {: id="20210314230240-kpo586q"}
-{: id="20210314215524-s1vmtw8" updated="20210315103841"}
+{: id="20210314215524-s1vmtw8" updated="20210315110848"}
 
 {: id="20210315103537-rwcvtyv"}
 
