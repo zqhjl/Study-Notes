@@ -212,33 +212,37 @@
       {: id="20210315103216-9arpriq"}
     - {: id="20210315103215-2nom1aq"}如果出现中文乱码问题，只需在 web. xm添加 Spring MVC自带的过滤器即可
       {: id="20210315103215-h17umm5" updated="20210315103308"}
+
+      ```xml
+      <filter>
+          <filter-name>encodingFilter</filter-name>
+          <filter-class>org. springframework web filter Character EncodingFilter</filter-class>
+          <init-param>
+              <param-name>encoding</param-name>
+              <param-value>UTF-8</param-value>
+          </init-param>
+      </filter>
+      <filter-mapping>
+          <filter-name>encodingFilter</filter-name>
+          <url-pattern>/*</url-pattern>
+      </filter-mapping>
+      ```
+      {: id="20210315093613-u4tf4kn" updated="20210315103339"}
     - {: id="20210315103840-mdkjnbw"}JSP页面的转发和重定向
       {: id="20210315103840-i1mkkoz" updated="20210315103846"}
 
       - {: id="20210315103848-40ne3eu"}Spring Mvc默认是以转发的形式响应JSP
         {: id="20210315103848-n90lqnh" updated="20210315103853"}
-      - {: id="20210315103854-n5evh1e"}
-        {: id="20210315103854-n62ukqz"}
-      {: id="20210315103848-8uzpned"}
+      - {: id="20210315103854-n5evh1e"}转发：forward:
+        {: id="20210315103854-n62ukqz" updated="20210315104851"}
+      - {: id="20210315104018-r0589ml"}重定向：redirect:
+        {: id="20210315104018-ozbu2w6" updated="20210315104858"}
+      {: id="20210315104902-f11bd4y"}
+    - {: id="20210315104902-va80o2i"}
+      {: id="20210315104902-4kq3oia"}
     {: id="20210315085948-nwsxnme"}
   {: id="20210314230240-kpo586q"}
 {: id="20210314215524-s1vmtw8" updated="20210315103841"}
-
-```xml
-<filter>
-    <filter-name>encodingFilter</filter-name>
-    <filter-class>org. springframework web filter Character EncodingFilter</filter-class>
-    <init-param>
-        <param-name>encoding</param-name>
-        <param-value>UTF-8</param-value>
-    </init-param>
-</filter>
-<filter-mapping>
-    <filter-name>encodingFilter</filter-name>
-    <url-pattern>/*</url-pattern>
-</filter-mapping>
-```
-{: id="20210315093613-u4tf4kn" updated="20210315103339"}
 
 {: id="20210315103537-rwcvtyv"}
 
