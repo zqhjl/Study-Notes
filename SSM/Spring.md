@@ -338,8 +338,8 @@
       {: id="20210315120439-570jo34" updated="20210315120456"}
     - {: id="20210315120442-4zb5zes"}Mapper.xml中 statement的 parameterType和接口中对应方法的参数类型一致
       {: id="20210315120442-5btgw1x" updated="20210315120457"}
-    - {: id="20210315120444-yp2svwm"}Mapper.xml中 statement的 resultType和接口中对应方法的返回值类型一致
-      {: id="20210315120444-8n36zbp" updated="20210315120500"}
+    - {: id="20210315120444-yp2svwm"}Mapper.xml中 statement的 resultType和接口中对应方法的返回值类型一致<123>
+      {: id="20210315120444-8n36zbp" updated="20210315183924"}
     {: id="20210315120433-vbdano2"}
   {: id="20210315112527-xlonle1"}
 {: id="20210314215524-s1vmtw8" updated="20210315120404"}
