@@ -164,9 +164,17 @@
 
       ![image.png](assets/image-20210314233000-l7v83jx.png)
       {: id="20210314232956-efiu6ll" updated="20210314233000"}
-    {: id="20210314235152-2emdbj7"}
+    {: id="20210315085756-cmdgcp2"}
+  - {: id="20210315085755-1zuoa7f"}Spring Mvc注解
+    {: id="20210315085755-cu9muxl" updated="20210315085817"}
+  - {: id="20210315085818-khjvsx9"}@RequestMapping
+    {: id="20210315085818-qo1h2ei" updated="20210315085825"}
+  - {: id="20210315085825-8lrnkyv"}Spring MVC通过@ RequestMapping注解将URL请求与业务方法进行映射，在 Handler的类定义处以及方法定义处都可以添加@ RequestMapping，在类定义处添加，相当于客户端多了一层访问路径
+    @Controller
+    @ Controller在类定义处添加，将该类交个loC容器来管理（结合 SpringMVC Xm的自动扫描配置使用），同时使其成为一个控制器，可以接收客户端请求
+    {: id="20210315085825-5t4jg2m" updated="20210315085825"}
   {: id="20210314230240-kpo586q"}
-{: id="20210314215524-s1vmtw8" updated="20210314235100"}
+{: id="20210314215524-s1vmtw8" updated="20210315085757"}
 
 
 {: id="20210314215524-0qa1um9" type="doc"}
