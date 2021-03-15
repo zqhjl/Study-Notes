@@ -326,11 +326,23 @@
       {: id="20210315114450-t4qs8xd" updated="20210315114450"}
     - {: id="20210315114456-ma93q6n"}parameterType是调用对应方法时参数的数据类型。
       {: id="20210315114456-w1h53f5" updated="20210315114456"}
-    - {: id="20210315115037-ywgmnk1"}
-      {: id="20210315115037-hxmyzcg"}
-    {: id="20210315114418-vzw3b99"}
+    {: id="20210315120403-7ibfuiw"}
+  - {: id="20210315115037-ywgmnk1"}创建接口对应的 Mapper.xm，定义接口方法对应的SQL语句。
+    {: id="20210315115037-hxmyzcg" updated="20210315120429"}
+
+    - {: id="20210315120432-p9chitm"}statement标签可根据SQL执行的业务选择 Insert、 delete、 update、 select My Batis框架会根据规则自动创建接口实现类的代理对象规则
+      {: id="20210315120432-k31hdxt" updated="20210315120436"}
+    - {: id="20210315120437-ggupjkg"}Mapper.xml中 namespace为接口的全类名。
+      {: id="20210315120437-afsv5at" updated="20210315120454"}
+    - {: id="20210315120439-41kof78"}Mapper.xml中 statement的id为接口中对应的方法名。
+      {: id="20210315120439-570jo34" updated="20210315120456"}
+    - {: id="20210315120442-4zb5zes"}Mapper.xml中 statement的 parameterType和接口中对应方法的参数类型一致
+      {: id="20210315120442-5btgw1x" updated="20210315120457"}
+    - {: id="20210315120444-yp2svwm"}Mapper.xml中 statement的 resultType和接口中对应方法的返回值类型一致
+      {: id="20210315120444-8n36zbp" updated="20210315120500"}
+    {: id="20210315120433-vbdano2"}
   {: id="20210315112527-xlonle1"}
-{: id="20210314215524-s1vmtw8" updated="20210315114430"}
+{: id="20210314215524-s1vmtw8" updated="20210315120404"}
 
 {: id="20210315103537-rwcvtyv"}
 
