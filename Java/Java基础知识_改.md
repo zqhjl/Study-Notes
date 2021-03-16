@@ -814,7 +814,7 @@
 
       - {: id="20210306002503-q05ww6m"}
         ```java
-           public static < E > void printArray( E[] inputArray )
+           public static <E> void printArray( E[] inputArray )
            {
                  for ( E element : inputArray ){
                     System.out.printf( "%s ", element );
@@ -822,7 +822,7 @@
                  System.out.println();
             }
         ```
-        {: id="20210301203429-2zj5f5y"}
+        {: id="20210301203429-2zj5f5y" updated="20210316215123"}
       {: id="20210306002504-gqnghmz"}
 
       - {: id="20210306002524-5yka68l"}使用
