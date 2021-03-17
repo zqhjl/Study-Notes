@@ -108,6 +108,10 @@
             {
               "name": "Cover.md",
               "path": "/templates/Notion-Cover/Cover.md"
+            },
+            {
+              "name": "randInt 1 719.md",
+              "path": "/templates/Notion-Cover/randInt 1 719.md"
             }
           ]
         }
