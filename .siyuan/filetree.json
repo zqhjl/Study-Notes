@@ -62,6 +62,10 @@
         {
           "name": "test2.md",
           "path": "/Java/test2.md"
+        },
+        {
+          "name": "test3.md",
+          "path": "/Java/test3.md"
         }
       ]
     },
