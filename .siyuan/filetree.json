@@ -56,16 +56,8 @@
           "isDir": true
         },
         {
-          "name": "test1.md",
-          "path": "/Java/test1.md"
-        },
-        {
-          "name": "test2.md",
-          "path": "/Java/test2.md"
-        },
-        {
-          "name": "test3.md",
-          "path": "/Java/test3.md"
+          "name": "test.md",
+          "path": "/Java/test.md"
         }
       ]
     },
@@ -100,6 +92,24 @@
         {
           "name": "test.md",
           "path": "/SSM/test.md"
+        }
+      ]
+    },
+    {
+      "name": "templates",
+      "path": "/templates/",
+      "isDir": true,
+      "children": [
+        {
+          "name": "Notion-Cover",
+          "path": "/templates/Notion-Cover/",
+          "isDir": true,
+          "children": [
+            {
+              "name": "Cover.md",
+              "path": "/templates/Notion-Cover/Cover.md"
+            }
+          ]
         }
       ]
     }
