@@ -4,6 +4,21 @@
   "isDir": true,
   "children": [
     {
+      "name": "离散数学",
+      "path": "/离散数学/",
+      "isDir": true,
+      "children": [
+        {
+          "name": "0 数学语言与证明方法.md",
+          "path": "/离散数学/0 数学语言与证明方法.md"
+        },
+        {
+          "name": "1 命题逻辑.md",
+          "path": "/离散数学/1 命题逻辑.md"
+        }
+      ]
+    },
+    {
       "name": "数据结构",
       "path": "/数据结构/",
       "isDir": true,
@@ -23,32 +38,14 @@
       ]
     },
     {
-      "name": "离散数学",
-      "path": "/离散数学/",
-      "isDir": true,
-      "children": [
-        {
-          "name": "0 数学语言与证明方法.md",
-          "path": "/离散数学/0 数学语言与证明方法.md"
-        },
-        {
-          "name": "1 命题逻辑.md",
-          "path": "/离散数学/1 命题逻辑.md"
-        }
-      ]
-    },
-    {
       "name": "Java",
       "path": "/Java/",
       "isDir": true,
       "children": [
         {
-          "name": "Java基础知识_改.md",
-          "path": "/Java/Java基础知识_改.md"
-        },
-        {
-          "name": "Java基础知识.md",
-          "path": "/Java/Java基础知识.md"
+          "name": "面向对象程序设计——Java语言",
+          "path": "/Java/面向对象程序设计——Java语言/",
+          "isDir": true
         },
         {
           "name": "SSM",
@@ -79,17 +76,7 @@
     {
       "name": "SSM",
       "path": "/SSM/",
-      "isDir": true,
-      "children": [
-        {
-          "name": "Spring.md",
-          "path": "/SSM/Spring.md"
-        },
-        {
-          "name": "test2.md",
-          "path": "/SSM/test2.md"
-        }
-      ]
+      "isDir": true
     },
     {
       "name": "templates",
