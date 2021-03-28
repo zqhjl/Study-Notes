@@ -74,16 +74,14 @@ Spring MVC 流程非常复杂，实际开发中很简单，因为大部分的组
 
 ```xml
 <dependencies>
-
     <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-webmvc</artifactId>
         <version>5.0.11.RELEASE</version>
     </dependency>
-
 </dependencies>
 ```
-{: id="20210326221302-vjyaf4l"}
+{: id="20210326221302-vjyaf4l" updated="20210329000952"}
 
 - {: id="20210326221302-k0h7ruu"}在 web.xml 中配置 DispatcherServlet。
   {: id="20210326221302-dj32ej6"}
@@ -275,7 +273,7 @@ public String index(@RequestParam("name") String str,@RequestParam("id") int age
 上述代码表示将请求的参数 name 和 id 分别赋给了形参 str 和 age ，同时自动完成了数据类型转换，将 “10” 转为了 int 类型的 10，再赋给 age，这些工作都是由 HandlerAdapter 来完成的。
 {: id="20210326221302-5wxu3q1"}
 
-Spring MVC 也支持 RESTful 风格的 URL。
+Spring MVC 也支持 RESTFul 风格的 URL。
 {: id="20210326221302-272ge1k"}
 
 传统类型：http://localhost:8080/hello/index?name=zhangsan&id=10
