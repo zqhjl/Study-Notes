@@ -59,8 +59,8 @@ Spring MVC 就是对这套流程的封装，屏蔽了很多底层代码，开放
   {: id="20210326221302-og5bvfg"}
 {: id="20210326221302-2fdavq6"}
 
-![image-20190313111136254](/Users/southwind/Library/Application Support/typora-user-images/image-20190313111136254.png)
-{: id="20210326221302-2yt6r5j"}
+![image.png](assets/image-20210329003914-hog16f5.png){: parent-style="display: block; text-align: center;" style="width: 656.53px;" style="width: 656.53px;"}
+{: id="20210326221302-2yt6r5j" updated="20210329003914"}
 
 Spring MVC 流程非常复杂，实际开发中很简单，因为大部分的组件不需要开发者创建、管理，只需要通过配置文件的方式完成配置即可，真正需要开发者进行处理的只有 Handler 、View。
 {: id="20210326221302-inhl1hk"}
