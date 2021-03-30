@@ -1,5 +1,5 @@
-# MyBatis
-{: id="20210330204518-dy81mqm"}
+### MyBatis
+{: id="20210330204518-dy81mqm" updated="20210330225322"}
 
 ORMapping: Object Relationship Mapping 对象关系映射
 对象指面向对象
@@ -7,8 +7,8 @@ ORMapping: Object Relationship Mapping 对象关系映射
 Java 到 MySQL 的映射，开发者可以以面向对象的思想来管理数据库。
 {: id="20210330204518-w695buz"}
 
-## 如何使用
-{: id="20210330204518-ooexvfb"}
+#### 如何使用
+{: id="20210330204518-ooexvfb" updated="20210330225327"}
 
 - {: id="20210330204518-f290sn8"}新建 Maven 工程,pom.xml
   {: id="20210330204518-med21mp"}
@@ -95,7 +95,7 @@ public class Account {
         <dataSource type="POOLED"〉
                     <property name="driver" value="com.mysql.cj.jdbc.Driver">
         </property>
-    <property name="url" value="jdbc:mysql://localhost:3306/mybatis? useUnicode=true&amp;characterEncoding=UTF-8"></property>
+    <property name="url" value="jdbc:mysql://localhost:3306/mybatis? useUnicode=true&characterEncoding=UTF-8"></property>
     <property name="username" value="root"></property>
     <property name="password" value="root"></property>
     </dataSource>
@@ -160,7 +160,7 @@ public class Account {
                 <property name="driver" value="com.mysql.cj.jdbc.Driver">
                 </property>
                 <property name="url"
-                          value="jdbc:mysql://localhost:3306/mybatis?useUnicode=true&amp;characterEncoding=UTF-8"></property>
+                          value="jdbc:mysql://localhost:3306/mybatis?useUnicode=true&characterEncoding=UTF-8"></property>
                 <property name="username" value="root"></property>
                 <property name="password" value="root"></property>
             </dataSource>
@@ -344,6 +344,7 @@ public class Test2 {
   {: id="20210330204518-4vtyoo4"}
 - {: id="20210330204518-3543i7a"}parameterType:参数数据类型
   {: id="20210330204518-8aw9quw"}
+
   1. {: id="20210330204518-baavbye"}基本数据类型，通过id查询Account
      {: id="20210330204518-ht5hncz"}
   {: id="20210330204518-z0hl0q6"}
@@ -401,6 +402,7 @@ public class Test2 {
 
 - {: id="20210330204518-4a6cgtq"}resultType :结果类型
   {: id="20210330204518-knchw5y"}
+
   1. {: id="20210330204518-r5vebzt"}基本数据类型，统计Account总数
      {: id="20210330204518-tl0fr1x"}
   {: id="20210330204518-ohm2aqf"}
@@ -670,6 +672,7 @@ MyBatis Generator,简称MBG,是一个专门为MyBatis框架开发者定制的代
 
 - {: id="20210330204518-20oslgz"}创建 MBG 配置文件 generatorConfig.xml
   {: id="20210330204518-ebf6jfc"}
+
   1. {: id="20210330204518-3e9urdw"}jdbcConnection配置数据库连接信息。
      {: id="20210330204518-xj30mac"}
   2. {: id="20210330204518-nye9zsg"}javaModelGenerator 配置JavaBean 的生成策略。
@@ -689,7 +692,7 @@ MyBatis Generator,简称MBG,是一个专门为MyBatis框架开发者定制的代
 PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd"> <generatorConfiguration>
     <context id="testTables" targetRuntime="MyBatis3">
         <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/mybatis?
-                                                                              useUnicode=true&amp;characterEncoding=UTF-8"
+                                                                              useUnicode=true&characterEncoding=UTF-8"
                         userId="root"
                         password="root"
                         ></jdbcConnection>
