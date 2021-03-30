@@ -50,7 +50,21 @@
         {
           "name": "SSM",
           "path": "/Java/SSM/",
-          "isDir": true
+          "isDir": true,
+          "children": [
+            {
+              "name": "Spring MVC.md",
+              "path": "/Java/SSM/Spring MVC.md"
+            },
+            {
+              "name": "Spring.md",
+              "path": "/Java/SSM/Spring.md"
+            },
+            {
+              "name": "MyBatis.md",
+              "path": "/Java/SSM/MyBatis.md"
+            }
+          ]
         }
       ]
     },
