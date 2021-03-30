@@ -65,6 +65,11 @@
               "path": "/Java/SSM/MyBatis.md"
             }
           ]
+        },
+        {
+          "name": "JavaGuide",
+          "path": "/Java/JavaGuide/",
+          "isDir": true
         }
       ]
     },
