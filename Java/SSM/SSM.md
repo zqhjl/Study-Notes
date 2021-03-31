@@ -175,7 +175,7 @@ Spring MVC 负责实现 MVC 设计模式，MyBatis 负责数据持久层，Sprin
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
         <property name="user" value="root"></property>
         <property name="password" value="root"></property>
-        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/test?useUnicode=true&amp;characterEncoding=UTF-8"></property>
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=UTF-8"></property>
         <property name="driverClass" value="com.mysql.cj.jdbc.Driver"></property>
         <property name="initialPoolSize" value="5"></property>
         <property name="maxPoolSize" value="10"></property>
@@ -376,6 +376,8 @@ public class UserHandler {
 }
 ```
 {: id="20210330234022-f330hur"}
+
+{: id="20210401001647-034q598"}
 
 
 {: id="20210330234022-4u51e05" type="doc"}
