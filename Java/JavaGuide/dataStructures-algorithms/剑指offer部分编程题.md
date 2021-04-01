@@ -2,7 +2,7 @@
 {: id="20210330211653-amhxhps"}
 
 #### **题目描述：**
-{: id="20210330211653-irqcso2"}
+{: id="20210330211653-irqcso2" updated="20210401230529"}
 
 大家都知道斐波那契数列，现在要求输入一个整数n，请你输出斐波那契数列的第n项。
 n<=39
@@ -44,7 +44,7 @@ n<=39
 
 ```java
 		 public int Fibonacci(int n) {
-           
+       
 			if (n <= 0) {
 				return 0;
 			}
@@ -146,7 +146,7 @@ f(n)=f(n-1)+f(n-2)+...+f(1)
 #### **补充：**
 {: id="20210330211653-b14uxpa"}
 
-**java中有三种移位运算符：**
+**Java中有三种移位运算符：**
 {: id="20210330211653-n8vcita"}
 
 1. {: id="20210330211653-25zjope"}“<<” :     **左移运算符**，等同于乘2的n次方
@@ -240,7 +240,7 @@ f(n)=f(n-1)+f(n-2)+...+f(1)
                 out.append(b);
             }
         }
-        return out.toString();     
+        return out.toString();   
     }
 ```
 {: id="20210330211653-dcd4tp3"}
@@ -289,7 +289,7 @@ f(n)=f(n-1)+f(n-2)+...+f(1)
 
 ```java
 public class Solution { 
-      boolean invalidInput=false;    
+      boolean invalidInput=false;  
       public double Power(double base, int exponent) {
           //如果底数等于0并且指数小于0
           //由于base为double型，不能直接用==判断
@@ -481,7 +481,7 @@ public class Solution {
         //如果节点个数小于所求的倒数第k个节点，则返回空
         if(count<a) return null;
         return pre;
-            
+        
     }
 }
 ```
@@ -658,7 +658,7 @@ public ListNode Merge(ListNode list1,ListNode list2) {
        }else{
            list2.next = Merge(list1, list2.next);
            return list2;
-       }       
+       }   
    }
 ```
 {: id="20210330211653-b4ubhqs"}
@@ -701,12 +701,12 @@ import java.util.Stack;
 public class Solution {
     Stack<Integer> stack1 = new Stack<Integer>();
     Stack<Integer> stack2 = new Stack<Integer>();
-     
+   
     //当执行push操作时，将元素添加到stack1
     public void push(int node) {
         stack1.push(node);
     }
-     
+   
     public int pop() {
         //如果两个队列都为空则抛出异常,说明用户没有push进任何元素
         if(stack1.empty()&&stack2.empty()){
