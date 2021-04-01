@@ -1,54 +1,5 @@
 点击关注[公众号](#公众号)及时获取笔主最新更新文章，并可免费领取本文档配套的《Java面试突击》以及Java工程师必备学习资源。
-{: id="20210330211654-ntdidzl"}
-
-<!-- MarkdownTOC -->
-
-- {: id="20210330211654-80h7oqe"}[Servlet总结](#servlet总结)
-  {: id="20210330211654-q5o99ua"}
-- {: id="20210330211654-vp8rs5z"}[阐述Servlet和CGI的区别?](#阐述servlet和cgi的区别)
-  {: id="20210330211654-f9836sp"}
-  - {: id="20210330211654-ak7zqp9"}[CGI的不足之处:](#cgi的不足之处)
-    {: id="20210330211654-0mjdr1q"}
-  - {: id="20210330211654-qgj2dip"}[Servlet的优点：](#servlet的优点)
-    {: id="20210330211654-uj6cw4m"}
-  {: id="20210330211654-f55087y"}
-- {: id="20210330211654-b5z96dk"}[Servlet接口中有哪些方法及Servlet生命周期探秘](#servlet接口中有哪些方法及servlet生命周期探秘)
-  {: id="20210330211654-lsjvmxz"}
-- {: id="20210330211654-g30opu6"}[get和post请求的区别](#get和post请求的区别)
-  {: id="20210330211654-d714rbw"}
-- {: id="20210330211654-7gjc4kz"}[什么情况下调用doGet\(\)和doPost\(\)](#什么情况下调用doget和dopost)
-  {: id="20210330211654-r2cshel"}
-- {: id="20210330211654-be3d579"}[转发（Forward）和重定向（Redirect）的区别](#转发forward和重定向redirect的区别)
-  {: id="20210330211654-pjgqt8d"}
-- {: id="20210330211654-egoruk7"}[自动刷新\(Refresh\)](#自动刷新refresh)
-  {: id="20210330211654-h92p39k"}
-- {: id="20210330211654-704x2il"}[Servlet与线程安全](#servlet与线程安全)
-  {: id="20210330211654-0n0i0rm"}
-- {: id="20210330211654-k1n7q6d"}[JSP和Servlet是什么关系](#jsp和servlet是什么关系)
-  {: id="20210330211654-x8cmppe"}
-- {: id="20210330211654-oatyeob"}[JSP工作原理](#jsp工作原理)
-  {: id="20210330211654-1zcevc5"}
-- {: id="20210330211654-2kuk2ln"}[JSP有哪些内置对象、作用分别是什么](#jsp有哪些内置对象、作用分别是什么)
-  {: id="20210330211654-icmetg6"}
-- {: id="20210330211654-xuqlu43"}[Request对象的主要方法有哪些](#request对象的主要方法有哪些)
-  {: id="20210330211654-dnhtou0"}
-- {: id="20210330211654-bn847zl"}[request.getAttribute\(\)和 request.getParameter\(\)有何区别](#requestgetattribute和-requestgetparameter有何区别)
-  {: id="20210330211654-0uh2uli"}
-- {: id="20210330211654-g86lbt6"}[include指令include的行为的区别](#include指令include的行为的区别)
-  {: id="20210330211654-uv2wl3y"}
-- {: id="20210330211654-sc8z456"}[JSP九大内置对象，七大动作，三大指令](#jsp九大内置对象，七大动作，三大指令)
-  {: id="20210330211654-094snh8"}
-- {: id="20210330211654-dcj9gae"}[讲解JSP中的四种作用域](#讲解jsp中的四种作用域)
-  {: id="20210330211654-8jnq0mm"}
-- {: id="20210330211654-jgv6x6j"}[如何实现JSP或Servlet的单线程模式](#如何实现jsp或servlet的单线程模式)
-  {: id="20210330211654-liboiw4"}
-- {: id="20210330211654-nc0y9xw"}[实现会话跟踪的技术有哪些](#实现会话跟踪的技术有哪些)
-  {: id="20210330211654-u4mwgjz"}
-- {: id="20210330211654-wa22cyv"}[Cookie和Session的的区别](#cookie和session的的区别)
-  {: id="20210330211654-a2ujkbc"}
-{: id="20210330211654-oepzu03"}
-
-<!-- /MarkdownTOC -->
+{: id="20210330211654-ntdidzl" updated="20210401212537"}
 
 ## Servlet总结
 {: id="20210330211654-tg8fyu3"}
@@ -122,7 +73,7 @@ Servlet接口定义了5个方法，其中**前三个方法与Servlet生命周期
 get和post请求实际上是没有区别，大家可以自行查询相关文章（参考文章：[https://www.cnblogs.com/logsharing/p/8448446.html](https://www.cnblogs.com/logsharing/p/8448446.html)，知乎对应的问题链接：[get和post区别？](https://www.zhihu.com/question/28586791)）！
 {: id="20210330211654-yssyoek"}
 
-可以把 get 和 post 当作两个不同的行为，两者并没有什么本质区别，底层都是 TCP 连接。 get请求用来从服务器上获得资源，而post是用来向服务器提交数据。比如你要获取人员列表可以用 get 请求，你需要创建一个人员可以用 post 。这也是 Restful  API 最基本的一个要求。
+可以把 get 和 post 当作两个不同的行为，两者并没有什么本质区别，底层都是 TCP 连接。 get请求用来从服务器上获得资源，而post是用来向服务器提交数据。比如你要获取人员列表可以用 get 请求，你需要创建一个人员可以用 post 。这也是 RESTFul  API 最基本的一个要求。
 {: id="20210330211654-68w7qze"}
 
 推荐阅读：
@@ -224,7 +175,7 @@ Response.setHeader("Refresh","5;URL=http://localhost:8080/servlet/example.htm");
 {: id="20210330211654-7hzxzu7"}
 
 JSP是一种Servlet，但是与HttpServlet的工作方式不太一样。HttpServlet是先由源代码编译为class文件后部署到服务器下，为先编译后部署。而JSP则是先部署后编译。JSP会在客户端第一次请求JSP文件时被编译为HttpJspPage类（接口Servlet的一个子类）。该类会被服务器临时存放在服务器工作目录里面。下面通过实例给大家介绍。
-工程JspLoginDemo下有一个名为login.jsp的Jsp文件，把工程第一次部署到服务器上后访问这个Jsp文件，我们发现这个目录下多了下图这两个东东。
+工程JspLoginDemo下有一个名为login.jsp的JSP文件，把工程第一次部署到服务器上后访问这个JSP文件，我们发现这个目录下多了下图这两个东东。
 .class文件便是JSP对应的Servlet。编译完毕后再运行class文件来响应客户端请求。以后客户端访问login.jsp的时候，Tomcat将不再重新编译JSP文件，而是直接调用class文件来响应客户端请求。
 ![JSP工作原理](https://my-blog-to-use.oss-cn-beijing.aliyuncs.com/2019-6/1.png)
 由于JSP只会在客户端第一次请求的时候被编译 ，因此第一次请求JSP时会感觉比较慢，之后就会感觉快很多。如果把服务器保存的class文件删除，服务器也会重新编译JSP。
@@ -427,7 +378,7 @@ if(cookies !=null){
     //something is here. 
     //you can get the value 
     cookie.getValue(); 
-       
+     
    }
  }
 
